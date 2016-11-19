@@ -1,0 +1,410 @@
+idRef {
+  id: "57e6eed86434318f7cb69ee3"
+}
+ui_name: "Fnord-fs1_lostDog1"
+nodes {
+  idRef {
+    id: "57e6f27a6434318f7cb69eed"
+  }
+  index: 0
+  text: "Excuse me - can you help me?"
+  branches {
+    responseText: "Nah, I\'m late for work"
+    actions {
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Help find a lost dog"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 1
+    idRef {
+      id: "57e6eed86434318f7cb69ee3:57e8f5a36434318902a0fe2e"
+    }
+  }
+  branches {
+    responseText: "Yeah, what do you need?"
+    nextNodeIndex: 2
+    idRef {
+      id: "57e6eed86434318f7cb69ee3:57eba330643431ad172ba724"
+    }
+  }
+  branches {
+    responseText: "{{CC}}CHA 5{{/CC}} You looking for a date?"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 5
+        }
+      }
+    }
+    nextNodeIndex: 4
+    idRef {
+      id: "57e6eed86434318f7cb69ee3:57eba41c643431ad172ba726"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "No Effect"
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "57eba535643431ad172ba729"
+  }
+  index: 1
+  text: "Arsehole.. I\'m looking for my fraggin dog! \nThere\'s a few hundred  nuyen if you find her!"
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "57dc5de86434311441d50bf6"
+          }
+          args {
+            string_value: "dogInfo"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Help find a lost dog"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "57eba59e643431ad172ba72c"
+  }
+  index: 2
+  text: "Have you seen my lost doggie? \nShe ran away and now I can\'t find her anywhere, an I\'m really worried about her!"
+  branches {
+    responseText: "Nope, sorry I haven\'t seen any dogs around today"
+    nextNodeIndex: 3
+    idRef {
+      id: "57e6eed86434318f7cb69ee3:57eba766643431ad172ba731"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "57eba796643431ad172ba734"
+  }
+  index: 3
+  text: "Here\'s her photo - If you see her get in touch. \nI\'m offering a reward if you can find her, please help me find my dog!"
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Help find a lost dog"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "57dc5de86434311441d50bf6"
+          }
+          args {
+            string_value: "dogInfo"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "57eba70b643431ad172ba72f"
+  }
+  index: 4
+  text: "Hahaa you\'re funny! I\'m looking for my lost dog, have you seen her?"
+  branches {
+    responseText: "Can\'t say I have.."
+    nextNodeIndex: 5
+    idRef {
+      id: "57e6eed86434318f7cb69ee3:57eba9ac643431ad172ba736"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "57ebaa77643431ad172ba747"
+  }
+  index: 5
+  text: "If you see her, I\'d be very, VERY grateful to you... I\'ll give you my number call me if you see her - there might even be some Nuyen in it for you."
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Help find a lost dog"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "57dc5de86434311441d50bf6"
+          }
+          args {
+            string_value: "dogInfo"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "581a4f89643431da6e2ba6ab"
+  }
+  index: 6
+  text: "I miss my puppy.. Do you have any news for me?"
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "57dc5de86434311441d50bf6"
+          }
+          args {
+            string_value: "dogInfo"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+  }
+  nextNodeIndex: 0
+  idRef {
+    id: "57e6eed86434318f7cb69ee3:57e6eed86434318f7cb69ee7"
+  }
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "57dc5de86434311441d50bf6"
+          }
+          args {
+            string_value: "dogInfo"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+  nextNodeIndex: 6
+  idRef {
+    id: "57e6eed86434318f7cb69ee3:5817a72a6434318c64b69f69"
+  }
+}

@@ -1,0 +1,7 @@
+id: "The Invisibles Omnibus"
+type: ItemType_QuestItem
+uirep {
+  description: "The Invisibles Omnibus by Grant Morrison"
+}
+credentials: 0
+sorting_group: "Quest"

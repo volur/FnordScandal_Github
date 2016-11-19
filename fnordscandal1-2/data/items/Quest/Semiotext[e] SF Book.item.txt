@@ -1,0 +1,7 @@
+id: "Semiotext[e] SF Book"
+type: ItemType_QuestItem
+uirep {
+  description: "Semiotext(e) SF Book"
+}
+credentials: 0
+sorting_group: "Quest"

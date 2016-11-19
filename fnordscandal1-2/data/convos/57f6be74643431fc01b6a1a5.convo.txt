@@ -1,0 +1,254 @@
+idRef {
+  id: "57f6be74643431fc01b6a1a5"
+}
+ui_name: "Fnord-fs1_shopper1"
+nodes {
+  idRef {
+    id: "57f6be77643431fc01b6a1ad"
+  }
+  index: 0
+  text: "3 Maple Dreams lotto tickets please"
+  branches {
+    responseText: "Coming right up!  Have a good evening"
+    actions {
+      ops {
+        functionName: "Order Actor to Move To (Region)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "57f6bc09643431fc01b6a19f"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Region)"
+            args {
+              string_value: "57f64e836434312342b69fcf"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Start Conversation"
+        args {
+          call_value {
+            functionName: "Get Map Item (Conversation)"
+            args {
+              string_value: "57f6c1a5643431fc01b6a1db"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "57f6bcca643431fc01b6a1a2"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    idRef {
+      id: "57f6be74643431fc01b6a1a5:57f6bf53643431fc01b6a1af"
+    }
+  }
+  branches {
+    responseText: "Sure thing, here you go - Have a great night"
+    actions {
+      ops {
+        functionName: "Order Actor to Protect (Region)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "57f6bc09643431fc01b6a19f"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Region)"
+            args {
+              string_value: "57f64e836434312342b69fcf"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Start Conversation"
+        args {
+          call_value {
+            functionName: "Get Map Item (Conversation)"
+            args {
+              string_value: "57f6c1a5643431fc01b6a1db"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "57f6bcca643431fc01b6a1a2"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    onlyOnce: true
+    idRef {
+      id: "57f6be74643431fc01b6a1a5:57f6bf70643431fc01b6a1b1"
+    }
+  }
+  branches {
+    responseText: "You know these are a scam right?"
+    nextNodeIndex: 1
+    idRef {
+      id: "57f6be74643431fc01b6a1a5:57f6bf92643431fc01b6a1b3"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "57f6bc09643431fc01b6a19f"
+  }
+}
+nodes {
+  idRef {
+    id: "57f6bfc0643431fc01b6a1b6"
+  }
+  index: 1
+  text: "I didn\'t realize Stuffer Shack hired statisticians... Shut up and give me my tickets "
+  branches {
+    responseText: "A fool and their nuyen.. Next!"
+    actions {
+      ops {
+        functionName: "Order Actor to Move To (Region)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "57f6bc09643431fc01b6a19f"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Region)"
+            args {
+              string_value: "57f64e836434312342b69fcf"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Start Conversation"
+        args {
+          call_value {
+            functionName: "Get Map Item (Conversation)"
+            args {
+              string_value: "57f6c1a5643431fc01b6a1db"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "57f6bcca643431fc01b6a1a2"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    idRef {
+      id: "57f6be74643431fc01b6a1a5:57f6c8236434319706b69eec"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+  idRef {
+    id: "57f6be74643431fc01b6a1a5:57f6be74643431fc01b6a1a9"
+  }
+}

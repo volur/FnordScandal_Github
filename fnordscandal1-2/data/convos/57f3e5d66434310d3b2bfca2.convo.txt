@@ -1,0 +1,335 @@
+idRef {
+  id: "57f3e5d66434310d3b2bfca2"
+}
+ui_name: "Fnord-fs1_arrivetowork"
+nodes {
+  idRef {
+    id: "57f3e5eb6434310d3b2bfcaa"
+  }
+  index: 0
+  text: "Well look like the drek dragged in! \n\'Sbout time you showed up"
+  branches {
+    responseText: "Yeah yeah, those Gangers out front were hassling me again"
+    nextNodeIndex: 1
+    idRef {
+      id: "57f3e5d66434310d3b2bfca2:57f3e6306434310d3b2bfcac"
+    }
+  }
+  branches {
+    responseText: "Whutevz - Any news today?"
+    nextNodeIndex: 2
+    idRef {
+      id: "57f3e5d66434310d3b2bfca2:57f3e6596434310d3b2bfcae"
+    }
+  }
+  branches {
+    responseText: "Not like you were doing anything productive around here.."
+    nextNodeIndex: 5
+    idRef {
+      id: "57f3e5d66434310d3b2bfca2:57f3e7006434310d3b2bfcb3"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "57f3e6be6434310d3b2bfcb1"
+  }
+  index: 1
+  text: "Ugh. I hope they\'re gone by now - they tried to shake me down earlier. \n\nHurry up and Clock In so I can get outta here - the Hockey game starts in 30"
+  branches {
+    responseText: "Yeah yeah I\'m doing it right now"
+    actions {
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Clock in on the employee console"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Enable/Disable Interactable Object"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "57f3d4a86434310d3b2bfc4c"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    idRef {
+      id: "57f3e5d66434310d3b2bfca2:57f3e9346434310d3b2bfcc1"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "57f3e7926434310d3b2bfcb6"
+  }
+  index: 2
+  text: "Nah same ole\' shiz - Some creepy chick\'s been asking around about a missing dog, I restocked the freezers and the next NERPS delivery ain\'t coming till next week."
+  branches {
+    responseText: "Thanks, has the boss-bot been around today? "
+    nextNodeIndex: 3
+    idRef {
+      id: "57f3e5d66434310d3b2bfca2:57f3e8556434310d3b2bfcbb"
+    }
+  }
+  branches {
+    responseText: "Alright good to know, yeah she wasn\'t too bad lookin\' to me - I haven\'t seen any dogs around lately though."
+    nextNodeIndex: 4
+    idRef {
+      id: "57f3e5d66434310d3b2bfca2:57f3e8836434310d3b2bfcbd"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "57f3e9506434310d3b2bfcc4"
+  }
+  index: 3
+  text: "I haven\'t seen the cameras moving too much today. I guess Big Brother is still busy cracking down on the Downsview locations.\n\nAnyway, I gotta get outta here, so hurry up and Clock In!"
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Clock in on the employee console"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "57f3d4a86434310d3b2bfc4c"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "57f3ec106434310d3b2bfcc7"
+  }
+  index: 4
+  text: "Me either, but she did say there\'s a pretty big Nuyen reward to find the dog. I figure she must be one of those Rye-High rich kids.\n\nAnyway, I gotta get outta here, so hurry up and Clock In!"
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Clock in on the employee console"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "57f3d4a86434310d3b2bfc4c"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "57f3e7e66434310d3b2bfcb9"
+  }
+  index: 5
+  text: "Screw you! I dun get paid enough fer this drek. Start your shift - I need to go pick up my kid before the game starts."
+  branches {
+    responseText: "Heh. Whatever you say, your majesty!"
+    actions {
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Clock in on the employee console"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Enable/Disable Interactable Object"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "57f3d4a86434310d3b2bfc4c"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    idRef {
+      id: "57f3e5d66434310d3b2bfca2:57f3e90e6434310d3b2bfcbf"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+  idRef {
+    id: "57f3e5d66434310d3b2bfca2:57f3e5d66434310d3b2bfca6"
+  }
+}

@@ -1,0 +1,308 @@
+idRef {
+  id: "57ed5fb9643431963478fd8b"
+}
+ui_name: "Fnord-fs1_stufferTerminal"
+nodes {
+  idRef {
+    id: "57ed5fbd643431963478fd93"
+  }
+  index: 0
+  text: "Welcome to the Stuffer Shack \nPublic Access Terminal\n\nPlease choose from the following options"
+  branches {
+    responseText: "Check Stuffer Club Points"
+    nextNodeIndex: 1
+    idRef {
+      id: "57ed5fb9643431963478fd8b:57ed6255643431963478fd95"
+    }
+  }
+  branches {
+    responseText: "Order an Oversized item"
+    nextNodeIndex: 2
+    idRef {
+      id: "57ed5fb9643431963478fd8b:57ed6272643431963478fd97"
+    }
+  }
+  branches {
+    responseText: "View this week\'s Special Offers"
+    nextNodeIndex: 3
+    idRef {
+      id: "57ed5fb9643431963478fd8b:57ed62c2643431963478fd99"
+    }
+  }
+  branches {
+    responseText: "Contact Stuffer Shack Support"
+    nextNodeIndex: 4
+    idRef {
+      id: "57ed5fb9643431963478fd8b:57ed62e5643431963478fd9b"
+    }
+  }
+  branches {
+    responseText: "{{CC}}[Decking 1]{{/CC}} Administration"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 5
+    hideIfUnavailable: true
+    idRef {
+      id: "57ed5fb9643431963478fd8b:57ed6613643431963478fdc5"
+    }
+  }
+  branches {
+    responseText: "Exit"
+    nextNodeIndex: -1
+    idRef {
+      id: "57ed5fb9643431963478fd8b:57ed74a464343196347900c3"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "57ed632d643431963478fd9e"
+  }
+  index: 1
+  text: "Your current Stuffer Club balance is 0 points"
+  branches {
+    responseText: "Main Menu"
+    nextNodeIndex: 0
+    idRef {
+      id: "57ed5fb9643431963478fd8b:57ed66e3643431963478fde8"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "57ed6352643431963478fda1"
+  }
+  index: 2
+  text: "Enter in the 6 digit Oversized product ID code\nYour purchase will be automatically retrieved"
+  branches {
+    responseText: "Main Menu"
+    nextNodeIndex: 0
+    idRef {
+      id: "57ed5fb9643431963478fd8b:57ed6752643431963478fdea"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_InputKeyboard
+}
+nodes {
+  idRef {
+    id: "57ed6388643431963478fda4"
+  }
+  index: 3
+  text: "This week\'s specials:\n\nCompressed Semi-Firm Tofu 500g 5\302\245\nSoy Cheese 750g 7\302\245\nEesti Hapukoor 20% 330g 20\302\245\nOld Bucktooth Shotgun Whiskey 2 for 35\302\245\n"
+  branches {
+    responseText: "Main Menu"
+    nextNodeIndex: 0
+    idRef {
+      id: "57ed5fb9643431963478fd8b:57ed6c1f643431963478fe82"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "57ed64e3643431963478fda7"
+  }
+  index: 4
+  text: "Our Support AI are available 24/7 to assist you. \nPlease speak clearly into the console microphone the nature of your issue."
+  branches {
+    responseText: "Main Menu"
+    nextNodeIndex: 0
+    idRef {
+      id: "57ed5fb9643431963478fd8b:57ed6c4d643431963478fea3"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "57ed665e643431963478fdc8"
+  }
+  index: 5
+  text: "Select the internal matrix node from the following options"
+  branches {
+    responseText: "Clear all caches"
+    nextNodeIndex: 6
+    idRef {
+      id: "57ed5fb9643431963478fd8b:57ed6d38643431963478fec8"
+    }
+  }
+  branches {
+    responseText: "Manual Reboot"
+    nextNodeIndex: 7
+    idRef {
+      id: "57ed5fb9643431963478fd8b:57ed6d3c643431963478feca"
+    }
+  }
+  branches {
+    responseText: "Validate Employee ID"
+    nextNodeIndex: 8
+    idRef {
+      id: "57ed5fb9643431963478fd8b:57ed6e9c643431963478fef5"
+    }
+  }
+  branches {
+    responseText: "Main Menu"
+    nextNodeIndex: 0
+    idRef {
+      id: "57ed5fb9643431963478fd8b:57ed74546434319634790036"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "No Effect"
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "57ed6efc643431963478fef8"
+  }
+  index: 6
+  text: "............All caches cleared."
+  branches {
+    responseText: "Admin"
+    nextNodeIndex: 5
+    idRef {
+      id: "57ed5fb9643431963478fd8b:57ed6f16643431963478fefa"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "57ed6f4f643431963478ff19"
+  }
+  index: 7
+  text: "Resetting Terminal.\nPress Any key to continue."
+  branches {
+    responseText: "Press the \'Any\' key"
+    nextNodeIndex: 0
+    idRef {
+      id: "57ed5fb9643431963478fd8b:57ed6f74643431963478ff1b"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "57ed7278643431963478ffb0"
+  }
+  index: 8
+  text: "Employee Verified"
+  branches {
+    responseText: "Admin"
+    nextNodeIndex: 5
+    idRef {
+      id: "57ed5fb9643431963478fd8b:57ed72d9643431963478ffb2"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Add Item to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "Stuffer Shack ID Card"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  nextNodeIndex: 0
+  idRef {
+    id: "57ed5fb9643431963478fd8b:57ed5fb9643431963478fd8f"
+  }
+}

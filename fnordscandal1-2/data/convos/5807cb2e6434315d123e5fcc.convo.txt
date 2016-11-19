@@ -1,0 +1,196 @@
+idRef {
+  id: "5807cb2e6434315d123e5fcc"
+}
+ui_name: "Fnord-fs1-homeTerminal"
+nodes {
+  idRef {
+    id: "5807cb536434315d123e5fd8"
+  }
+  index: 0
+  text: "You have 0 new messages."
+  branches {
+    responseText: "Approve (5) Pending Updates and Restart"
+    nextNodeIndex: 1
+    idRef {
+      id: "5807cb2e6434315d123e5fcc:5807cb706434315d123e5fda"
+    }
+  }
+  branches {
+    responseText: "Warning! Your terminal may have been used in a bot-swarm incursion. Please check your personal IC and Firewall settings."
+    nextNodeIndex: -1
+    idRef {
+      id: "5807cb2e6434315d123e5fcc:5807cbb96434315d123e5fdc"
+    }
+  }
+  branches {
+    responseText: "Instant Home Delivery! Buy Now and Save On Tomorrow\'s Hottest Deals"
+    nextNodeIndex: -1
+    idRef {
+      id: "5807cb2e6434315d123e5fcc:5807cbf16434315d123e5fde"
+    }
+  }
+  branches {
+    responseText: "Exit"
+    nextNodeIndex: -1
+    idRef {
+      id: "5807cb2e6434315d123e5fcc:5807cd126434315d123e5fe0"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5807cd256434315d123e5fe3"
+  }
+  index: 1
+  text: "Rebooting......."
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "57dc5de86434311441d50bf6"
+          }
+          args {
+            string_value: "squatTerrminal"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5807d1ea6434315d123e6006"
+  }
+  index: 2
+  text: "Null Error"
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5807d6216434310315b69efe"
+  }
+  index: 3
+  text: ""
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "57dc5de86434311441d50bf6"
+          }
+          args {
+            string_value: "squatTerrminal"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+  }
+  nextNodeIndex: 0
+  idRef {
+    id: "5807cb2e6434315d123e5fcc:5807cb2e6434315d123e5fd0"
+  }
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "57dc5de86434311441d50bf6"
+          }
+          args {
+            string_value: "squatTerrminal"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+  nextNodeIndex: 2
+  idRef {
+    id: "5807cb2e6434315d123e5fcc:5807d1e06434315d123e6003"
+  }
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "No Condition"
+    }
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "57dc5de86434311441d50bf6"
+          }
+          args {
+            string_value: "squatTerrminal"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+  }
+  nextNodeIndex: 3
+  idRef {
+    id: "5807cb2e6434315d123e5fcc:5807d61e6434310315b69efb"
+  }
+}

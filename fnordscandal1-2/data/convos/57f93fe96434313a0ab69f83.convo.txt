@@ -1,0 +1,493 @@
+idRef {
+  id: "57f93fe96434313a0ab69f83"
+}
+ui_name: "Fnord-fs1_drunkTalk2"
+nodes {
+  idRef {
+    id: "57f940016434313a0ab69f8b"
+  }
+  index: 0
+  text: "Mr.Mayor! Sir!?\n\nAhh drek this ain\'t good.. Hey - Hey! Are you ok?!"
+  branches {
+    responseText: "He doesn\'t look so good..and he smells like vodka and onion rings. "
+    nextNodeIndex: 1
+    idRef {
+      id: "57f93fe96434313a0ab69f83:5803b9cb643431de0eb69ee8"
+    }
+  }
+  branches {
+    responseText: "What the hell are we gunna do? He smashed through the security gate! "
+    nextNodeIndex: 1
+    idRef {
+      id: "57f93fe96434313a0ab69f83:5803c00a643431de0eb69f1b"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "57f80c0b643431df06b6a08a"
+  }
+}
+nodes {
+  idRef {
+    id: "5803b9d3643431de0eb69eeb"
+  }
+  index: 1
+  text: "Hey Fnord - buddy listen to me, we gotta get you outta here before the media drones show up."
+  branches {
+    responseText: "Hey! I\'m talking to you -"
+    nextNodeIndex: 2
+    idRef {
+      id: "57f93fe96434313a0ab69f83:5803ba30643431de0eb69eed"
+    }
+  }
+  branches {
+    responseText: "Hey! He can\'t leave until Lonestar shows up. That\'s very clearly expressed in the Stuffer Shack Employee Standards Manual."
+    nextNodeIndex: 2
+    idRef {
+      id: "57f93fe96434313a0ab69f83:5803c50f643431de0eb69f47"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "57f80c0b643431df06b6a08a"
+  }
+  actions {
+    ops {
+      functionName: "Clear Actor Orders"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "57f640bb6434312342b69fcd"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5803ba33643431de0eb69ef0"
+  }
+  index: 2
+  text: "Yeah-Be with you in a minute."
+  branches {
+    responseText: "The District Manager is NOT going to like this..."
+    nextNodeIndex: 3
+    idRef {
+      id: "57f93fe96434313a0ab69f83:5803c517643431de0eb69f51"
+    }
+  }
+  branches {
+    responseText: "This day just keeps on GETTIN\' BETTER!"
+    nextNodeIndex: 3
+    idRef {
+      id: "57f93fe96434313a0ab69f83:5803c6cf643431de0eb69fdb"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "57f80c0b643431df06b6a08a"
+  }
+}
+nodes {
+  idRef {
+    id: "5803c517643431de0eb69f54"
+  }
+  index: 3
+  text: "Okay okay, fine... Mr.Fnord I need you to get in the car now. \nHey Stuffer Shack, get over here and gimme a hand!"
+  branches {
+    responseText: "He better not puke on me!"
+    nextNodeIndex: 4
+    idRef {
+      id: "57f93fe96434313a0ab69f83:5803bad4643431de0eb69ef2"
+    }
+  }
+  branches {
+    responseText: "Eewwwh! The Mayor just grabbed my ass..."
+    nextNodeIndex: 4
+    idRef {
+      id: "57f93fe96434313a0ab69f83:5803c73b643431de0eb69ff0"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "57f80c0b643431df06b6a08a"
+  }
+  actions {
+    ops {
+      functionName: "Order Actor to Move To (Prop)"
+      args {
+        call_value {
+          functionName: "All Actors Within Area"
+          args {
+            call_value {
+              functionName: "Area: Radius Arount Point"
+              args {
+                int_value: 50
+              }
+              args {
+                call_value {
+                  functionName: "Current Location of Actor"
+                  args {
+                    call_value {
+                      functionName: "Get Map Item (Actor)"
+                      args {
+                        string_value: "57f640bb6434312342b69fcd"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "57f40d4e6434312342b69fb7"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 6
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5803bade643431de0eb69ef9"
+  }
+  index: 4
+  text: "Look..aeh... $(l.guy), \nWhat we have here is a bit of an embarrassing situation for all parties involved..."
+  branches {
+    responseText: "Yeah, that\'s a bit of an understatement. The District Manager is going to lose his shiz when he sees this!"
+    nextNodeIndex: 5
+    idRef {
+      id: "57f93fe96434313a0ab69f83:5803bc26643431de0eb69efb"
+    }
+  }
+  branches {
+    responseText: "The Mayor doesn\'t look very good after running through that security fence."
+    nextNodeIndex: 5
+    idRef {
+      id: "57f93fe96434313a0ab69f83:5803c88e643431de0eb6a001"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "57f80c0b643431df06b6a08a"
+  }
+  actions {
+    ops {
+      functionName: "Kill Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "57f640bb6434312342b69fcd"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "DeathMethod"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5803bd35643431de0eb69efe"
+  }
+  index: 5
+  text: "I think what\'s best for all involved is if you go back inside and disable the alarm. "
+  branches {
+    responseText: "But what about the AI Manager and Lonestar? I can\'t shut off the alarm, only Lonestar can disable it."
+    nextNodeIndex: 6
+    idRef {
+      id: "57f93fe96434313a0ab69f83:5803bda3643431de0eb69f00"
+    }
+  }
+  branches {
+    responseText: "Oh really? Why is that?"
+    nextNodeIndex: 8
+    idRef {
+      id: "57f93fe96434313a0ab69f83:5803cb1f643431de0eb6a00e"
+    }
+  }
+  branches {
+    responseText: "What am I supposed to tell my boss?"
+    nextNodeIndex: 6
+    idRef {
+      id: "57f93fe96434313a0ab69f83:5803cb39643431de0eb6a010"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "57f80c0b643431df06b6a08a"
+  }
+}
+nodes {
+  idRef {
+    id: "5803bda6643431de0eb69f03"
+  }
+  index: 6
+  text: "Don\'t worry about it, my buddy The Resonator is on his way to help you out."
+  branches {
+    responseText: "Who is that?"
+    nextNodeIndex: 7
+    idRef {
+      id: "57f93fe96434313a0ab69f83:5803bdd3643431de0eb69f05"
+    }
+  }
+  branches {
+    responseText: "The Resonator? Is that a person or a sex toy?"
+    nextNodeIndex: 7
+    idRef {
+      id: "57f93fe96434313a0ab69f83:5803ceca643431de0eb6a02c"
+    }
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Help me out? With what?"
+    nextNodeIndex: 7
+    idRef {
+      id: "57f93fe96434313a0ab69f83:5803cef6643431de0eb6a02e"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "57f80c0b643431df06b6a08a"
+  }
+}
+nodes {
+  idRef {
+    id: "5803bdd7643431de0eb69f08"
+  }
+  index: 7
+  text: "Look, I gotta get his Mayorship home... and quickly. You need anything else ask The Resonator. Thanks buddy, I owe ya one."
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "57f80c0b643431df06b6a08a"
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Disable the Security Alarm"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Kill Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "57f80c0b643431df06b6a08a"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "DeathMethod"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Move Prop with Speed"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "57f40d4e6434312342b69fb7"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specified Point (3D)"
+          args {
+            float_value: -5
+          }
+          args {
+            float_value: 0
+          }
+          args {
+            float_value: -64
+          }
+        }
+      }
+      args {
+        float_value: 8
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5803cb5e643431de0eb6a013"
+  }
+  index: 8
+  text: "If Lonestar or the Media spot The Mayor here - it\'s going to be a dog show. Do you really want to deal with the circus of reporters, camera crews, bloggers and trendies swarm on this place? \n\nDo yourself a favor, blame it on some gangers."
+  branches {
+    responseText: "I\'ll lose my job if I don\'t follow the Stuffer Shack Employee Emergency Protocols. "
+    nextNodeIndex: 6
+    idRef {
+      id: "57f93fe96434313a0ab69f83:5803cd9f643431de0eb6a01f"
+    }
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "What\'s in it for me?"
+    nextNodeIndex: 6
+    idRef {
+      id: "57f93fe96434313a0ab69f83:5803cda5643431de0eb6a021"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "57f80c0b643431df06b6a08a"
+  }
+}
+roots {
+  nextNodeIndex: 0
+  idRef {
+    id: "57f93fe96434313a0ab69f83:57f93fe96434313a0ab69f87"
+  }
+}

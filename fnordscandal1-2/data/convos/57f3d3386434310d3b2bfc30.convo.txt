@@ -1,0 +1,240 @@
+idRef {
+  id: "57f3d3386434310d3b2bfc30"
+}
+ui_name: "Fnord-fs1_employeeconsole"
+nodes {
+  idRef {
+    id: "57f3d3486434310d3b2bfc38"
+  }
+  index: 0
+  text: "Stuffer Shack Employee Console"
+  branches {
+    responseText: "Start Shift"
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "57dc5de86434311441d50bf6"
+            }
+            args {
+              string_value: "stufferEmployeeConsole"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Send Event After Delay"
+        args {
+          string_value: "USER_EVENT"
+        }
+        args {
+          float_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 1
+    idRef {
+      id: "57f3d3386434310d3b2bfc30:57f3d3546434310d3b2bfc3a"
+    }
+  }
+  branches {
+    responseText: "End Shift"
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "57dc5de86434311441d50bf6"
+            }
+            args {
+              string_value: "stufferEmployeeConsole"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 2
+    idRef {
+      id: "57f3d3386434310d3b2bfc30:57f3d3636434310d3b2bfc3c"
+    }
+  }
+  branches {
+    responseText: "Request Bathroom Break"
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "57dc5de86434311441d50bf6"
+            }
+            args {
+              string_value: "stufferEmployeeConsole"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 3
+    idRef {
+      id: "57f3d3386434310d3b2bfc30:57f3d3a06434310d3b2bfc3e"
+    }
+  }
+  branches {
+    responseText: "Back to Work"
+    nextNodeIndex: -1
+    idRef {
+      id: "57f3d3386434310d3b2bfc30:580bacde643431f601c6c16a"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "57f3e14a6434310d3b2bfc8b"
+  }
+  index: 1
+  text: "Welcome to another great day at Stuffer Shack $(l.firstname)! \n\nToday\'s inspirational quote is:\n\"In a convenience-based society, you are at the center of the action.\""
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Clock in on the employee console"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "57dc5de86434311441d50bf6"
+          }
+          args {
+            string_value: "stufferEmployeeConsole"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "57f3e0ab6434310d3b2bfc88"
+  }
+  index: 2
+  text: "Error - Minimum shift requirements have not been met. Please return to your duties or your Stuffer Shack Supervisor will be notified."
+  branches {
+    responseText: "Main Menu"
+    nextNodeIndex: 0
+    idRef {
+      id: "57f3d3386434310d3b2bfc30:57f3f23e643431304178fd5b"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "57f3d3ec6434310d3b2bfc41"
+  }
+  index: 3
+  text: "We\'re sorry the nearest {{CC}}Bathroom{{/CC}} is 1.7 km away at the {{CC}}Jarvis Stuffer Shack{{/CC}}. A replacement staffer has been requested and will arrive in {{CC}}27{{/CC}} hour(s)."
+  branches {
+    responseText: "Main Menu"
+    nextNodeIndex: 0
+    idRef {
+      id: "57f3d3386434310d3b2bfc30:57f3f258643431304178fd6e"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+  idRef {
+    id: "57f3d3386434310d3b2bfc30:57f3d3386434310d3b2bfc34"
+  }
+}
