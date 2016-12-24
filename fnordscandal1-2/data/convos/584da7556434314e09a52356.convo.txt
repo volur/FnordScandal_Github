@@ -1,0 +1,50 @@
+idRef {
+  id: "584da7556434314e09a52356"
+}
+ui_name: "Fnord-fs2-libraryMatrix"
+nodes {
+  idRef {
+    id: "584da76e6434314e09a5235e"
+  }
+  index: 0
+  text: "Welcome to the Chinatown Public Library. \n\nPlease read and agree with our terms and conditions before you proceed....\n\n{{GM}}A massive wall of bureaucratic legalese{{/GM}}"
+  branches {
+    responseText: "I accept the terms and conditions"
+    actions {
+      ops {
+        functionName: "Force-Use Interactable Object (with Actor)"
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "584da6f46434314e09a52353"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    idRef {
+      id: "584da7556434314e09a52356:584da7d56434314e09a52365"
+    }
+  }
+  branches {
+    responseText: "I do not accept the terms and conditions"
+    nextNodeIndex: -1
+    idRef {
+      id: "584da7556434314e09a52356:584da7ef6434314e09a52367"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+  idRef {
+    id: "584da7556434314e09a52356:584da7556434314e09a5235a"
+  }
+}
