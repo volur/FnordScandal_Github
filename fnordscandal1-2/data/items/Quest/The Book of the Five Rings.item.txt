@@ -1,7 +1,0 @@
-id: "The Book of the Five Rings"
-type: ItemType_QuestItem
-uirep {
-  description: "The Book of the Five Rings by Miyamoto Musashi"
-}
-credentials: 0
-sorting_group: "Quest"

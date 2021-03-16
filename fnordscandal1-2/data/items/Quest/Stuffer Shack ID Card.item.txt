@@ -1,7 +1,0 @@
-id: "Stuffer Shack ID Card"
-type: ItemType_QuestItem
-uirep {
-  name: "Stuffer Shack ID Card"
-}
-credentials: 0
-sorting_group: "Quest"

@@ -1,7 +1,0 @@
-id: "Occult Philosophy Books"
-type: ItemType_QuestItem
-uirep {
-  description: "Three Books of Occult Philosophy by Heinrich Cornelius Agrippa"
-}
-credentials: 0
-sorting_group: "Quest"

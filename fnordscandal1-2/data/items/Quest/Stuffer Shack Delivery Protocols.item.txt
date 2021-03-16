@@ -1,7 +1,0 @@
-id: "Stuffer Shack Delivery Protocols"
-type: ItemType_QuestItem
-uirep {
-  name: "Stuffer Shack Pay Data"
-}
-credentials: 0
-sorting_group: "Quest"
