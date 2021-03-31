@@ -1,0 +1,279 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: T 30. märts 19:30:16 2021\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: /data/scenes/TorontoHubWestend.srt:SceneDef:scene_title
+#: /data/scenes/TorontoMetro.srt:SceneDef:scene_title
+#: /data/scenes/TorontoHubCityHall.srt:SceneDef:scene_title
+#: /data/scenes/TorontoHubChinatown.srt:SceneDef:scene_title
+msgid "New Scene"
+msgstr ""
+
+#: /data/scenes/TorontoHubWestend.srt:CharacterInstance:char_name
+#: /data/scenes/Scene1.srt:CharacterInstance:char_name
+#: /data/scenes/TorontoHubCityHall.srt:CharacterInstance:char_name
+#: /data/scenes/TorontoHubChinatown.srt:CharacterInstance:char_name
+msgid "New Actor"
+msgstr ""
+
+#: /data/convos/605e38cc3730629861002669.convo:ConversationNode:text
+msgid "Mghgahhmhag...NERPS!"
+msgstr ""
+
+#: /data/convos/605e38cc3730629861002669.convo:ConversationLink:responsetext
+msgid "Sir are you ok? Do you need assistance?"
+msgstr ""
+
+#: /data/convos/605e38cc3730629861002669.convo:ConversationLink:responsetext
+msgid "What the frick did you do to the fence?!"
+msgstr ""
+
+#: /data/convos/605e38cc3730629861002669.convo:ConversationNode:text
+msgid "Whagoynna...Whiigunnae....\n"
+"\n"
+"WOOOOO!!!!!!!!"
+msgstr ""
+
+#: /data/convos/605e38cc3730629861002669.convo:ConversationLink:responsetext
+msgid "Ugh..Frak my life..."
+msgstr ""
+
+#: /data/convos/605e38cc3730629861002669.convo:ConversationLink:responsetext
+msgid "The District Manager is NOT going to like this!"
+msgstr ""
+
+#: /data/scenes/TorontoMetro.srt:CharacterInstance:char_name
+msgid "Blocker IC"
+msgstr ""
+
+#: /data/scenes/TorontoMetro.srt:CharacterInstance:char_name
+msgid "Doctor Xiaoqing"
+msgstr ""
+
+#: /data/scenes/TorontoMetro.srt:CharacterInstance:char_name
+msgid "Li mei"
+msgstr ""
+
+#: /data/items/FS_Xandro_Datastick.item:ItemDef:closeupCaption
+#: /data/items/FS_Xandro_Datastick.item:UIRep:name
+msgid "Xandro's Datastick"
+msgstr ""
+
+#: /data/convos/606225bb373062b05e00802b.convo:ConversationNode:text
+msgid "Hello, how can I help you today?"
+msgstr ""
+
+#: /data/convos/606225bb373062b05e00802b.convo:ConversationLink:responsetext
+msgid "I need supplies"
+msgstr ""
+
+#: /data/convos/606225bb373062b05e00802b.convo:ConversationLink:responsetext
+msgid "I'm looking to install some cyberware"
+msgstr ""
+
+#: /data/convos/606225bb373062b05e00802b.convo:ConversationLink:responsetext
+msgid "I'm good thanks"
+msgstr ""
+
+#: /data/convos/606225bb373062b05e00802b.convo:ConversationNode:text
+msgid "No problem"
+msgstr ""
+
+#: /data/convos/606225bb373062b05e00802b.convo:ConversationNode:text
+msgid "Okay hop on to the table and let's take a look"
+msgstr ""
+
+#: /:ProjectDef:project_name
+msgid "FnordScandalv2"
+msgstr ""
+
+#: /data/items/FS_StufferShack_ID.item:UIRep:name
+msgid "Stuffer Shack ID"
+msgstr ""
+
+#: /data/items/FS_StufferShack_ID.item:UIRep:description
+msgid "Stuffer Shack Employee ID"
+msgstr ""
+
+#: /data/scenes/Scene1.srt:SceneDef:scene_title
+msgid "Cabbagetown"
+msgstr ""
+
+#: /data/scenes/Scene1.srt:TsCall:Display Text over Actor:text
+msgid "What the drek was that?! It sounds like it came from the parking lot."
+msgstr ""
+
+#: /data/scenes/Scene1.srt:TsCall:Display Text over Actor:text
+msgid "Xaaannnddrrroo! Whersh ma - I wunna gettah mega-fries 'n Jamaican patty!"
+msgstr ""
+
+#: /data/scenes/Scene1.srt:TsCall:Display Text over Actor:text
+msgid "Rob! Where ya been? Ah drek what did you do to the car?!"
+msgstr ""
+
+#: /data/scenes/Scene1.srt:CharacterInstance:char_name
+msgid "Mayor Rob Fnord"
+msgstr ""
+
+#: /data/scenes/Scene1.srt:CharacterInstance:char_name
+msgid "Veejay Gupta"
+msgstr ""
+
+#: /data/scenes/Scene1.srt:CharacterInstance:char_name
+msgid "Xandro Lee"
+msgstr ""
+
+#: /data/scenes/Scene1.srt:CharacterInstance:char_name
+msgid "RESONATOR"
+msgstr ""
+
+#: /data/scenes/Scene1.srt:SceneGoal:name
+msgid "Start your shift"
+msgstr ""
+
+#: /data/scenes/Scene1.srt:SceneGoal:description
+msgid "Start your shift at Stuffer Shack"
+msgstr ""
+
+#: /data/scenes/Scene1.srt:SceneGoal:name
+msgid "Grab your ID Card"
+msgstr ""
+
+#: /data/scenes/Scene1.srt:SceneGoal:description
+msgid "Pick up your ID"
+msgstr ""
+
+#: /data/scenes/Scene1.srt:SceneGoal:name
+msgid "Help out Xandro"
+msgstr ""
+
+#: /data/scenes/Scene1.srt:SceneGoal:name
+msgid "Connect the datastick to the Manager's workstation"
+msgstr ""
+
+#: /data/convos/605cf359373062bc230014ee.convo:ConversationNode:text
+msgid "Nice of you to finally show up $(l.name)"
+msgstr ""
+
+#: /data/convos/605cf359373062bc230014ee.convo:ConversationLink:responsetext
+msgid "Hey Veejay, same drek - different day, eh?"
+msgstr ""
+
+#: /data/convos/605cf359373062bc230014ee.convo:ConversationNode:text
+msgid "Yeah, yeah - Anyway, it's been pretty quiet - you should have an easy night. \n"
+"\n"
+"I'm outta here -Take it sleazy!"
+msgstr ""
+
+#: /data/convos/605cf359373062bc230014ee.convo:ConversationLink:responsetext
+msgid "Seeya"
+msgstr ""
+
+#: /data/convos/6060e8583730621410006171.convo:ConversationNode:text
+msgid "Access Denied"
+msgstr ""
+
+#: /data/convos/6060e8583730621410006171.convo:ConversationLink:responsetext
+msgid "Connect Datastick"
+msgstr ""
+
+#: /data/convos/605e573137306298610026d4.convo:ConversationNode:text
+msgid "Robbie! - Ah drek this ain't good "
+msgstr ""
+
+#: /data/convos/605e573137306298610026d4.convo:ConversationLink:responsetext
+msgid "What is going on here?"
+msgstr ""
+
+#: /data/convos/605e573137306298610026d4.convo:ConversationNode:text
+msgid "Look, what's yername? \n"
+"\n"
+"Eh, $(l.name) - I'm gunna be straight with you - we're in a little bit of a "
+"situation here."
+msgstr ""
+
+#: /data/convos/605e573137306298610026d4.convo:ConversationLink:responsetext
+msgid "No drek"
+msgstr ""
+
+#: /data/convos/605e573137306298610026d4.convo:ConversationNode:text
+msgid "Here's 500 nuyen, you never saw us, this never happened"
+msgstr ""
+
+#: /data/convos/605e573137306298610026d4.convo:ConversationLink:responsetext
+msgid "Uhh"
+msgstr ""
+
+#: /data/convos/605e573137306298610026d4.convo:ConversationNode:text
+msgid "Alright, you have me over a barrel here kid. \n"
+"\n"
+"Take this datastick and plug it in to the Manager's workstation in the back."
+msgstr ""
+
+#: /data/convos/605e573137306298610026d4.convo:ConversationLink:responsetext
+msgid "Cool"
+msgstr ""
+
+#: /data/convos/605e573137306298610026d4.convo:ConversationNode:text
+msgid "I've gotta get his Mayorship outta here before the media drones show up.\n"
+"\n"
+"Keep yer mouth shut and just follow the instructions on the datastick."
+msgstr ""
+
+#: /data/convos/605e573137306298610026d4.convo:ConversationLink:responsetext
+msgid "Okay"
+msgstr ""
+
+#: /data/convos/6057a4be3730628c39005628.convo:ConversationNode:text
+msgid "It's another spectacular shift at Stuffer Shack Cabbagetown!\n"
+"\n"
+"Swipe your ID to start your shift."
+msgstr ""
+
+#: /data/convos/6057a4be3730628c39005628.convo:ConversationLink:responsetext
+msgid "I confirm I am ready to provide outstanding service our Stuffer Shack customers."
+msgstr ""
+
+#: /data/convos/606228d7373062b05e00806c.convo:ConversationNode:text
+msgid "Welcome to Heavenly Massage, have you been a client with us before?"
+msgstr ""
+
+#: /data/convos/606228d7373062b05e00806c.convo:ConversationLink:responsetext
+msgid "Yes"
+msgstr ""
+
+#: /data/convos/606228d7373062b05e00806c.convo:ConversationLink:responsetext
+msgid "No"
+msgstr ""
+
+#: /data/convos/606228d7373062b05e00806c.convo:ConversationNode:text
+msgid "We have a standard membership fee of 200 nuyen to access all of our services."
+msgstr ""
+
+#: /data/convos/606228d7373062b05e00806c.convo:ConversationLink:responsetext
+msgid "Sounds good {{CC}}Pay 200{{/CC}}"
+msgstr ""
+
+#: /data/convos/606228d7373062b05e00806c.convo:ConversationLink:responsetext
+msgid "No thanks"
+msgstr ""
+
+#: /data/items/FS_HeavenlyMassage_Membership.item:ItemDef:closeupCaption
+#: /data/items/FS_HeavenlyMassage_Membership.item:UIRep:name
+msgid "Heavenly Massage Membership"
+msgstr ""
+

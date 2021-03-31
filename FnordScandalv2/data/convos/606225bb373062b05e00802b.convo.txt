@@ -1,0 +1,115 @@
+idRef {
+  id: "606225bb373062b05e00802b"
+}
+ui_name: "FS_Merchant_Medic"
+nodes {
+  idRef {
+    id: "60622648373062b05e008033"
+  }
+  index: 0
+  text: "Hello, how can I help you today?"
+  branches {
+    responseText: "I need medical supplies"
+    nextNodeIndex: 1
+    idRef {
+      id: "606225bb373062b05e00802b:606226dc373062b05e008035"
+    }
+  }
+  branches {
+    responseText: "I\'m looking to install some cyberware"
+    nextNodeIndex: 3
+    idRef {
+      id: "606225bb373062b05e00802b:606226de373062b05e008037"
+    }
+  }
+  branches {
+    responseText: "I\'m good thanks"
+    nextNodeIndex: -1
+    idRef {
+      id: "606225bb373062b05e00802b:6062270f373062b05e00803f"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "60622725373062b05e008042"
+  }
+  index: 1
+  text: "No problem"
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+    idRef {
+      id: "606225bb373062b05e00802b:606383b3373062ac57007f67"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "606383b7373062ac57007f6a"
+  }
+  index: 2
+  text: ""
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "No Effect"
+    }
+    ops {
+      functionName: "Open Store Screen From Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "60637ecd373062ac57007f00"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "60622848373062b05e008057"
+  }
+  index: 3
+  text: "Okay hop on to the table and let\'s take a look"
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+    idRef {
+      id: "606225bb373062b05e00802b:606383ce373062ac57007f6c"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "606383d1373062ac57007f6f"
+  }
+  index: 4
+  text: ""
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Open Cyberware Screen From Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "60637ecd373062ac57007f00"
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  nextNodeIndex: 0
+  idRef {
+    id: "606225bb373062b05e00802b:606225bb373062b05e00802f"
+  }
+}
+default_speaker_id: "60622094373062b05e00802a"

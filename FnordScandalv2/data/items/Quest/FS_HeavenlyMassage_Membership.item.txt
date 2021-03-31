@@ -1,0 +1,11 @@
+id: "FS_HeavenlyMassage_Membership"
+type: ItemType_QuestItem
+uirep {
+  name: "Heavenly Massage Membership"
+}
+credentials: 0
+sorting_group: "Quest"
+closeupImage {
+  filename: "hub/hub_walldecoration_holoscreen02_s@2x"
+}
+closeupCaption: "Heavenly Massage Membership"

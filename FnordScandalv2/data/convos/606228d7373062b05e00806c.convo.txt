@@ -1,0 +1,152 @@
+idRef {
+  id: "606228d7373062b05e00806c"
+}
+ui_name: "FS_Lemei_Gatekeep"
+nodes {
+  idRef {
+    id: "60622904373062b05e008074"
+  }
+  index: 0
+  text: "Welcome to Heavenly Massage, have you been a client with us before?"
+  branches {
+    responseText: "Yes"
+    conditions {
+      ops {
+        functionName: "Evaluate If Actor Has Item"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "FS_HeavenlyMassage_Membership"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 1
+    idRef {
+      id: "606228d7373062b05e00806c:606229f1373062b05e008076"
+    }
+  }
+  branches {
+    responseText: "No"
+    nextNodeIndex: 2
+    idRef {
+      id: "606228d7373062b05e00806c:60622a01373062b05e008078"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "606380cc373062ac57007f1a"
+  }
+  index: 1
+  text: "Welcome back $(l.name), so nice to see you again!\n\nYou can go right through."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "60622a39373062b05e008089"
+  }
+  index: 2
+  text: "We have a standard membership fee of 200 nuyen to access all of our services."
+  branches {
+    responseText: "Sounds good {{CC}}Pay \302\245200{{/CC}}"
+    actions {
+      ops {
+        functionName: "Remove Nuyen"
+        args {
+          int_value: 200
+        }
+      }
+      ops {
+        functionName: "Add Item to Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "FS_HeavenlyMassage_Membership"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    idRef {
+      id: "606228d7373062b05e00806c:60622b7c373062b05e00808b"
+    }
+  }
+  branches {
+    responseText: "No thanks"
+    nextNodeIndex: -1
+    idRef {
+      id: "606228d7373062b05e00806c:60622b82373062b05e00808d"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+  idRef {
+    id: "606228d7373062b05e00806c:606228d7373062b05e008070"
+  }
+}
+default_speaker_id: "60621520373062b05e008026"

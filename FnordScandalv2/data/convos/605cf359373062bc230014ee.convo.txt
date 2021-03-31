@@ -1,0 +1,108 @@
+idRef {
+  id: "605cf359373062bc230014ee"
+}
+ui_name: "FS_StufferShack_Veejay"
+nodes {
+  idRef {
+    id: "605cf3c0373062bc230014f6"
+  }
+  index: 0
+  text: "Nice of you to finally show up $(l.name)"
+  branches {
+    responseText: "Hey Veejay, same drek - different day, eh?"
+    nextNodeIndex: 1
+    idRef {
+      id: "605cf359373062bc230014ee:605cf54e373062bc23001508"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "605b9eea373062bc230014eb"
+  }
+}
+nodes {
+  idRef {
+    id: "605cf5f0373062bc23001516"
+  }
+  index: 1
+  text: "Yeah, yeah - Anyway, it\'s been pretty quiet - you should have an easy night. \n\nI\'m outta here -Take it sleazy!"
+  branches {
+    responseText: "Seeya"
+    actions {
+      ops {
+        functionName: "Enable/Disable Interactable Object"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "6057a5b43730628c39005637"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Move To (Region)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "605b9eea373062bc230014eb"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Region)"
+            args {
+              string_value: "601862f5373062586c006478"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    idRef {
+      id: "605cf359373062bc230014ee:605cf6b3373062bc23001518"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "605b9eea373062bc230014eb"
+  }
+}
+roots {
+  nextNodeIndex: 0
+  idRef {
+    id: "605cf359373062bc230014ee:605cf359373062bc230014f2"
+  }
+}
+default_speaker_id: "605b9eea373062bc230014eb"

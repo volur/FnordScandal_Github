@@ -1,0 +1,141 @@
+idRef {
+  id: "605e38cc3730629861002669"
+}
+ui_name: "FS_StufferShack_FnordMumbles"
+nodes {
+  idRef {
+    id: "605e38cf3730629861002671"
+  }
+  index: 0
+  text: "Mghgahhmhag...NERPS!"
+  branches {
+    responseText: "Sir are you ok? Do you need assistance?"
+    nextNodeIndex: 1
+    idRef {
+      id: "605e38cc3730629861002669:605e398a3730629861002673"
+    }
+  }
+  branches {
+    responseText: "What the frick did you do to the fence?!"
+    nextNodeIndex: 2
+    idRef {
+      id: "605e38cc3730629861002669:605e39b23730629861002678"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "605e398d3730629861002676"
+  }
+  index: 1
+  text: "Whagoynna...Whiigunnae....\n\nWOOOOO!!!!!!!!"
+  branches {
+    responseText: "Ugh..Frak my life..."
+    actions {
+      ops {
+        functionName: "Order Actor to Move To (Actor)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "605e33da373062986100265a"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "605a45b33730628c390056bd"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    idRef {
+      id: "605e38cc3730629861002669:605e3cdf3730629861002692"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "605e3c16373062986100267d"
+  }
+  index: 2
+  text: "Whagoynna...Whiigunnae....\n\nWOOOOO!!!!!!!!"
+  branches {
+    responseText: "The District Manager is NOT going to like this!"
+    actions {
+      ops {
+        functionName: "Order Actor to Move To (Actor)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "605e33da373062986100265a"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "605a45b33730628c390056bd"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    idRef {
+      id: "605e38cc3730629861002669:605e3da93730629861002694"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+  idRef {
+    id: "605e38cc3730629861002669:605e38cc373062986100266d"
+  }
+}
+default_speaker_id: "605a45b33730628c390056bd"

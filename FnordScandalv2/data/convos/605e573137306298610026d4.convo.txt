@@ -1,0 +1,301 @@
+idRef {
+  id: "605e573137306298610026d4"
+}
+ui_name: "FS_Xandro_FirstEncounter"
+nodes {
+  idRef {
+    id: "605e57a837306298610026dc"
+  }
+  index: 0
+  text: "Robbie! - Ah drek this ain\'t good "
+  branches {
+    responseText: "What is going on here?"
+    nextNodeIndex: 1
+    idRef {
+      id: "605e573137306298610026d4:605e588337306298610026e6"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "605e58c537306298610026e9"
+  }
+  index: 1
+  text: "Look, what\'s yername? \n\nEh, $(l.name) - I\'m gunna be straight with you - we\'re in a little bit of a situation here."
+  branches {
+    responseText: "No drek"
+    actions {
+      ops {
+        functionName: "Add Nuyen"
+        args {
+          int_value: 500
+        }
+      }
+    }
+    nextNodeIndex: 2
+    idRef {
+      id: "605e573137306298610026d4:605e594b37306298610026eb"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "605e595237306298610026ee"
+  }
+  index: 2
+  text: "Here\'s 500 nuyen, you never saw us, this never happened"
+  branches {
+    responseText: "Uhh"
+    nextNodeIndex: 3
+    idRef {
+      id: "605e573137306298610026d4:605e5b6537306298610026fe"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "605e5b683730629861002701"
+  }
+  index: 3
+  text: "Alright, you have me over a barrel here kid. \n\nTake this datastick and plug it in to the Manager\'s workstation in the back."
+  branches {
+    responseText: "Cool"
+    actions {
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Help out Xandro"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Enable/Disable Interactable Object"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "605e6d6f373062141000602d"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Add Item to Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "FS_Xandro_Datastick"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 4
+    idRef {
+      id: "605e573137306298610026d4:605e5cb03730629861002703"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "605e5cb23730629861002706"
+  }
+  index: 4
+  text: "I\'ve gotta get his Mayorship outta here before the media drones show up.\n\nKeep yer mouth shut and just follow the instructions on the datastick."
+  branches {
+    responseText: "Okay"
+    actions {
+      ops {
+        functionName: "Order Actor to Patrol"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "605a45b33730628c390056bd"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (PatrolRoute)"
+            args {
+              string_value: "-1"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Move To (Prop)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "605a45b33730628c390056bd"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Prop)"
+            args {
+              string_value: "6060ce7037306214100060f6"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Move To (Prop)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "605e33da373062986100265a"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Prop)"
+            args {
+              string_value: "6060ce7037306214100060f6"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    idRef {
+      id: "605e573137306298610026d4:6060cd1037306214100060f3"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+  idRef {
+    id: "605e573137306298610026d4:605e573137306298610026d8"
+  }
+}
+default_speaker_id: "605e33da373062986100265a"
