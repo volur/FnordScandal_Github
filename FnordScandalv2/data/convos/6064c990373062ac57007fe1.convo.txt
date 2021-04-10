@@ -1,0 +1,68 @@
+idRef {
+  id: "6064c990373062ac57007fe1"
+}
+ui_name: "FS_Merchant_Magic"
+nodes {
+  idRef {
+    id: "6064c9a1373062ac57007fe9"
+  }
+  index: 0
+  text: "Welcome seeker, your coming was foretold."
+  branches {
+    responseText: "Cool, I need stuff"
+    nextNodeIndex: 1
+    idRef {
+      id: "6064c990373062ac57007fe1:6064cb2f373062ac57007feb"
+    }
+  }
+  branches {
+    responseText: "That\'s all I need for now"
+    nextNodeIndex: -1
+    idRef {
+      id: "6064c990373062ac57007fe1:6064ccdc373062ac5700802f"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "6064cb3b373062ac57007fee"
+  }
+  index: 1
+  text: "As we say back in Iceland: \'On with the butter!\'"
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+    idRef {
+      id: "6064c990373062ac57007fe1:6064cc66373062ac57008013"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "6064cc69373062ac57008016"
+  }
+  index: 2
+  text: ""
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Open Store Screen From Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "6064c34e373062ac57007fcd"
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  nextNodeIndex: 0
+  idRef {
+    id: "6064c990373062ac57007fe1:6064c990373062ac57007fe5"
+  }
+}

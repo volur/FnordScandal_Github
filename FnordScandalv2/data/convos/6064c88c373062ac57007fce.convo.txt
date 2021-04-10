@@ -1,0 +1,19 @@
+idRef {
+  id: "6064c88c373062ac57007fce"
+}
+ui_name: "FS_LoPans_Bartender"
+nodes {
+  idRef {
+    id: "6064c8c6373062ac57007fd6"
+  }
+  index: 0
+  text: "Welcome to Lo Pan\'s, what can I get for ya?"
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+  idRef {
+    id: "6064c88c373062ac57007fce:6064c88c373062ac57007fd2"
+  }
+}
+default_speaker_id: "6064c158373062ac57007fcc"

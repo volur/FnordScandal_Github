@@ -1,0 +1,68 @@
+idRef {
+  id: "60688768373062302c006e10"
+}
+ui_name: "FS_Merchant_Adept"
+nodes {
+  idRef {
+    id: "606887b6373062302c006e18"
+  }
+  index: 0
+  text: "Hello, have you come to train?"
+  branches {
+    responseText: "I\'ve come to learn a new form"
+    nextNodeIndex: 1
+    idRef {
+      id: "60688768373062302c006e10:6068882b373062302c006e1a"
+    }
+  }
+  branches {
+    responseText: "Not today"
+    nextNodeIndex: -1
+    idRef {
+      id: "60688768373062302c006e10:6068890e373062302c006e2d"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "60688842373062302c006e1d"
+  }
+  index: 1
+  text: "Take your first stance and we\'ll begin"
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+    idRef {
+      id: "60688768373062302c006e10:6068885a373062302c006e1f"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "6068885d373062302c006e22"
+  }
+  index: 2
+  text: ""
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Open Store Screen From Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "606881d2373062302c006df9"
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  nextNodeIndex: 0
+  idRef {
+    id: "60688768373062302c006e10:60688768373062302c006e14"
+  }
+}

@@ -55,9 +55,6 @@ nodes {
   nodeType: ConversationNodeType_Simple
   actions {
     ops {
-      functionName: "No Effect"
-    }
-    ops {
       functionName: "Open Store Screen From Actor"
       args {
         call_value {

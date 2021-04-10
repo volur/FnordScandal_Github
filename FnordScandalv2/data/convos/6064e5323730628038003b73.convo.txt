@@ -1,0 +1,68 @@
+idRef {
+  id: "6064e5323730628038003b73"
+}
+ui_name: "FS_Merchant_Guns"
+nodes {
+  idRef {
+    id: "6064e56b3730628038003b7b"
+  }
+  index: 0
+  text: "Greetings! How may I assist you on this fine day?"
+  branches {
+    responseText: "I need some firepower"
+    nextNodeIndex: 1
+    idRef {
+      id: "6064e5323730628038003b73:6064e5c83730628038003b87"
+    }
+  }
+  branches {
+    responseText: "Thanks, we\'re good."
+    nextNodeIndex: -1
+    idRef {
+      id: "6064e5323730628038003b73:6064e6773730628038003b9a"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "6064e5d63730628038003b8a"
+  }
+  index: 1
+  text: "I have a fine selection to choose from"
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+    idRef {
+      id: "6064e5323730628038003b73:6064e5ea3730628038003b8c"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "6064e5ed3730628038003b8f"
+  }
+  index: 2
+  text: ""
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Open Store Screen From Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "6064e1af3730628038003b71"
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  nextNodeIndex: 0
+  idRef {
+    id: "6064e5323730628038003b73:6064e5323730628038003b77"
+  }
+}

@@ -1,0 +1,96 @@
+idRef {
+  id: "606a0c9f3730625836000c2a"
+}
+ui_name: "FS_Test_MatrixTeam"
+nodes {
+  idRef {
+    id: "606a0cb03730625836000c32"
+  }
+  index: 0
+  text: "Add to team"
+  branches {
+    responseText: "Yes"
+    actions {
+      ops {
+        functionName: "Change Actor Team"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "6068d72e37306274730037bf"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Matrix"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Change Actor Control"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "6068d72e37306274730037bf"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "PlayerOrAI"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "No Effect"
+      }
+    }
+    nextNodeIndex: -1
+    idRef {
+      id: "606a0c9f3730625836000c2a:606a0cb23730625836000c34"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+  idRef {
+    id: "606a0c9f3730625836000c2a:606a0c9f3730625836000c2e"
+  }
+}

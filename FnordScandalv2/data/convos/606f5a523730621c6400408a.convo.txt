@@ -1,0 +1,33 @@
+idRef {
+  id: "606f5a523730621c6400408a"
+}
+ui_name: "FS_Gargoyle"
+nodes {
+  idRef {
+    id: "606f5a913730621c64004092"
+  }
+  index: 0
+  text: "What\'s the magic word?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+    idRef {
+      id: "606f5a523730621c6400408a:606f5bbd3730621c64004094"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "606f5c523730621c64004097"
+  }
+  index: 1
+  text: ""
+  nodeType: ConversationNodeType_InputKeyboard
+}
+roots {
+  nextNodeIndex: 0
+  idRef {
+    id: "606f5a523730621c6400408a:606f5a523730621c6400408e"
+  }
+}

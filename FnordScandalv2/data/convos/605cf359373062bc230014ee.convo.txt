@@ -25,7 +25,68 @@ nodes {
     id: "605cf5f0373062bc23001516"
   }
   index: 1
-  text: "Yeah, yeah - Anyway, it\'s been pretty quiet - you should have an easy night. \n\nI\'m outta here -Take it sleazy!"
+  text: "Yeah, yeah - Anyway, it\'s been pretty quiet - you should have an easy night. \n\nDid you remember your Stuffer Shack ID?"
+  branches {
+    responseText: "Ah dang! I\'ll be back in a few minutes."
+    nextNodeIndex: -1
+    idRef {
+      id: "605cf359373062bc230014ee:606e03293730621c6400404f"
+    }
+  }
+  branches {
+    responseText: "Yep, we\'re all good"
+    conditions {
+      ops {
+        functionName: "Evaluate If Actor Has Item"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "FS_StufferShack_ID"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 2
+    idRef {
+      id: "605cf359373062bc230014ee:606e04183730621c64004051"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "605b9eea373062bc230014eb"
+  }
+}
+nodes {
+  idRef {
+    id: "606e04683730621c64004054"
+  }
+  index: 2
+  text: "Alright then, I\'m outta here. \n\nTake it sleazy!"
   branches {
     responseText: "Seeya"
     actions {
@@ -91,13 +152,10 @@ nodes {
     }
     nextNodeIndex: -1
     idRef {
-      id: "605cf359373062bc230014ee:605cf6b3373062bc23001518"
+      id: "605cf359373062bc230014ee:606e048c3730621c64004056"
     }
   }
   nodeType: ConversationNodeType_Simple
-  sourceInSceneRef {
-    id: "605b9eea373062bc230014eb"
-  }
 }
 roots {
   nextNodeIndex: 0
