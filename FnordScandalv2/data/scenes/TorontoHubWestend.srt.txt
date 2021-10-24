@@ -51,6 +51,390 @@ triggers {
   }
   is_oneshot: false
 }
+triggers {
+  name: "LocalMetroTranspo-Cabbagetown"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "601496bc373062d875001b0b"
+          }
+          args {
+            string_value: "Shadowrun_Subway_Travel"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 4440444
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Teleport Actor"
+      args {
+        call_value {
+          functionName: "All Actors on Team"
+          args {
+            call_value {
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specified Point (2D)"
+          args {
+            float_value: 109
+          }
+          args {
+            float_value: 148
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 5
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "601496bc373062d875001b0b"
+          }
+          args {
+            string_value: "Shadowrun_Subway_Travel"
+          }
+        }
+      }
+      args {
+        int_value: 9009009
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "60734f9e373062086f0066dc"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "RunnerApt"
+  events {
+    ops {
+      functionName: "On Curtains Up"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Evaluate If Actor Has Item"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "HasOrHasNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "FS-Westend_Key"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Region Enabled"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "604928a337306218660005c4"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "604e69b53730623457004737"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "6091ac963730622c37002d88"
+  }
+  elseActions {
+    ops {
+      functionName: "Set Region Enabled"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "604928a337306218660005c4"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "604e69b53730623457004737"
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "SlurpyJob1"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "6049294c37306218660005c5"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "601496bc373062d875001b0b"
+          }
+          args {
+            string_value: "Xandro_Jobs"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Teleport Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "6064e83c3730628038003ba5"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Random Point Within Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "6049294c37306218660005c5"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "60a2c93037306278730045cc"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
 regions {
   name: "SurplusIn"
   position {
@@ -373,7 +757,7 @@ regions {
     width: 1
     height: 3
   }
-  enabledAtStart: true
+  enabledAtStart: false
   is_camera_region: false
   is_matrix_node: false
   is_vfx_fill_region: false
@@ -737,6 +1121,64 @@ regions {
   combat_outro_stinger: ""
   vfx_fill_prefab_name: ""
 }
+regions {
+  name: "HiddenLocker"
+  position {
+    x: 65
+    y: 125
+    width: 12
+    height: 16
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  is_matrix_node: false
+  is_vfx_fill_region: false
+  idRef {
+    id: "6091abf63730622c37002d70"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: true
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+  no_fow_in_region: false
+  combat_intense_music: ""
+  combat_wrapup_music: ""
+  loop_combat_intense_music: true
+  loop_combat_wrapup_music: true
+  combat_intense_threshold: 5
+  combat_wrapup_threshold: 2
+  combat_fade_interval: 2
+  combat_intro_stinger: ""
+  combat_outro_stinger: ""
+  vfx_fill_prefab_name: ""
+}
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
@@ -852,19 +1294,31 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: 6
+    x: 66
     y: 0
-    z: 103
+    z: 128
   }
-  orientation: ORIENTATION_S
-  displayName: "Slurpy"
+  orientation: ORIENTATION_W
+  displayName: "Slurpy_1"
   idRef {
     id: "6064e83c3730628038003ba5"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    conversationPoint {
+      conversationID: "60a2bfc73730627873004549"
+      turnToFace: false
+      default_speaker_id: "6064e83c3730628038003ba5"
+    }
+    interactionIcon: InteractionIcon_Conversation
+    interaction_info_text: ""
   }
   lod: 0
   character_instance {
     prefab_name: "Berlin:Story/OrkMaleSamuel"
-    character_sheet_id: "BaseCivilian"
+    character_sheet_id: "Thug_Lv2_Melee"
+    equipment_sheet_id: "Thug_Lv2_Melee_Gear"
     character_mod {
       stats {
         body: 0
@@ -922,10 +1376,19 @@ characters {
         esp_control: 0
         drone_combat: 0
       }
-      archetypeName: "Non-Combatant"
+      archetypeName: "Guard - Seek And Destroy"
       attitude: AttitudeAggressive
       vulnerabilities {
       }
+    }
+    equipment {
+      prefab_name: "Kamikaze"
+    }
+    equipment {
+      prefab_name: "DocWagonBasic"
+    }
+    equipment {
+      prefab_name: "HealthPack 1"
     }
     team_id: "Civilians"
     char_name: "Slurpy"
@@ -934,7 +1397,7 @@ characters {
     portrait {
       filename: "pc_orkmale_06_blondetusks"
     }
-    karma: 6
+    karma: 65
     first_name: "Slurpy"
     last_name: ""
   }

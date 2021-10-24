@@ -1,0 +1,290 @@
+idRef {
+  id: "609191023730622c190056ca"
+}
+ui_name: "FS_a1_Xandro_Job1"
+nodes {
+  idRef {
+    id: "609193c23730622c190056e2"
+  }
+  index: 0
+  text: "Eaayyy it\'s my new favorite runner!\n"
+  branches {
+    responseText: "I got your message, what happened to the Stuffer Shack?"
+    nextNodeIndex: 1
+    idRef {
+      id: "609191023730622c190056ca:609193ef3730622c190056e4"
+    }
+  }
+  branches {
+    responseText: "I did what you asked. Am I in any sort of trouble?"
+    nextNodeIndex: 1
+    idRef {
+      id: "609191023730622c190056ca:61746edc3730629c7900547f"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "6091954d3730622c190056e7"
+  }
+  index: 1
+  text: "Don\'t worry about it, the Resonator took care of everything...\n\nOn an unrelated note, you can\'t step foot in a Stuffer Shack for awhile."
+  branches {
+    responseText: "What do you mean?"
+    nextNodeIndex: 2
+    idRef {
+      id: "609191023730622c190056ca:609196113730622c190056e9"
+    }
+  }
+  branches {
+    responseText: "Stuffer Shack was my life! What will I do now?"
+    nextNodeIndex: 2
+    idRef {
+      id: "609191023730622c190056ca:61746f593730629c79005498"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "609197ba3730622c190056ec"
+  }
+  index: 2
+  text: "We\'re gunna need you to lie low until the heat dies down.\n\nGood news is, I\'ve got a job for you."
+  branches {
+    responseText: "I\'m listening.."
+    nextNodeIndex: 3
+    idRef {
+      id: "609191023730622c190056ca:6091986d3730622c190056ee"
+    }
+  }
+  branches {
+    responseText: "Haven\'t I done enough already?"
+    nextNodeIndex: 3
+    idRef {
+      id: "609191023730622c190056ca:61746f9f3730629c790054ad"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "60919be63730622c19005705"
+  }
+  index: 3
+  text: "I\'m gunna need you and Slurpy to head over to Loki Lounge and talk to Lao Da."
+  branches {
+    responseText: "Who is Slurpy?"
+    nextNodeIndex: 4
+    idRef {
+      id: "609191023730622c190056ca:60919caa3730622c19005707"
+    }
+  }
+  branches {
+    responseText: "Who is Lao Da?"
+    nextNodeIndex: 7
+    idRef {
+      id: "609191023730622c190056ca:61746ff03730629c790054be"
+    }
+  }
+  branches {
+    responseText: "What\'s in it for me?"
+    nextNodeIndex: 4
+    idRef {
+      id: "609191023730622c190056ca:6174701c3730629c790054c0"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Talk to Lao Da"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "60919d5f3730622c1900570a"
+  }
+  index: 4
+  text: "Just head over to the apartment and Slurpy will fill ya in on the rest."
+  branches {
+    responseText: "What apartment?"
+    nextNodeIndex: 5
+    idRef {
+      id: "609191023730622c190056ca:60919d6a3730622c1900570c"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "60919eb73730622c1900571d"
+  }
+  index: 5
+  text: "Your new base of operations - here\'s the key. If ya need anything else, the Resonator will take care of it."
+  branches {
+    responseText: "Wiz"
+    nextNodeIndex: 6
+    idRef {
+      id: "609191023730622c190056ca:60919ec03730622c1900571f"
+    }
+  }
+  branches {
+    responseText: "But - ah, I don\'t-"
+    nextNodeIndex: 6
+    idRef {
+      id: "609191023730622c190056ca:617471683730629c790054dc"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Add Item to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "FS-Westend_Key"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Visit the new apartment and talk to Slurpy"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "6091a1a93730622c19005750"
+  }
+  index: 6
+  text: "Oh, and one more thing - don\'t come back here again. Got it?\n\nGreat, now get moving."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "617470713730629c790054c3"
+  }
+  index: 7
+  text: "Y\'know for a runner you ask alotta stupid questions.\n\nJust head over to the apartment and Slurpy will fill ya in on the rest."
+  branches {
+    responseText: "What apartment?"
+    nextNodeIndex: 5
+    idRef {
+      id: "609191023730622c190056ca:617471253730629c790054d3"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+  idRef {
+    id: "609191023730622c190056ca:609191023730622c190056ce"
+  }
+}

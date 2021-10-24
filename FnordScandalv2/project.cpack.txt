@@ -1,10 +1,10 @@
 project_id: "601496bc373062d875001b0b"
 project_name: "FnordScandalv2"
-project_version: "0.1"
+project_version: "2.1"
 author_name: "Volur"
 synopsis: ""
 has_story: true
-read_only: false
+read_only: true
 preview_image: "preview"
 game_version_required: 3
 content_pack_dependencies {

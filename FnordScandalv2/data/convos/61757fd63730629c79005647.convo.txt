@@ -1,0 +1,327 @@
+idRef {
+  id: "61757fd63730629c79005647"
+}
+ui_name: "FS_a1_LokiLoungue_CuttersDefeat"
+nodes {
+  idRef {
+    id: "6175800b3730629c7900564f"
+  }
+  index: 0
+  text: "Eyh Whoah! Slow down, we give up!"
+  branches {
+    responseText: "You better come clean\n"
+    nextNodeIndex: 1
+    idRef {
+      id: "61757fd63730629c79005647:6175802d3730629c79005651"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "617580cb3730629c79005654"
+  }
+  index: 1
+  text: "Alright, alright. Some gangers over with the Dixon City crew has been bragging about some big payday trid-clip they have of the Mayor."
+  branches {
+    responseText: "And?"
+    nextNodeIndex: 2
+    idRef {
+      id: "61757fd63730629c79005647:617580d33730629c79005656"
+    }
+  }
+  branches {
+    responseText: "What\'s on the clip?"
+    nextNodeIndex: 2
+    idRef {
+      id: "61757fd63730629c79005647:6175bbdf373062900c005c5a"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "6175838a3730629c79005659"
+  }
+  index: 2
+  text: "That\'s all I know! Xandro was supposed to show up with a credstick for me to deliver. Instead he sent you two clowns."
+  branches {
+    responseText: "Watch it chummer, you\'re on thin ice."
+    nextNodeIndex: 3
+    idRef {
+      id: "61757fd63730629c79005647:617583b73730629c7900565b"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "617583ef3730629c7900565e"
+  }
+  index: 3
+  text: "Really Slurpy? You gunna let this fool talk to us like that?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+    idRef {
+      id: "61757fd63730629c79005647:6175b7ea373062900c005c23"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "6175b7ee373062900c005c26"
+  }
+  index: 4
+  text: "Watch it kid, these guys ain\'t worth it.\n\nC\'mon we better move before the rest of the Cutters start showing up."
+  branches {
+    responseText: "Shucks, just when it was getting fun."
+    actions {
+      ops {
+        functionName: "End Current Team Round"
+      }
+      ops {
+        functionName: "Set Team Alliance"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TeamAlliance"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Team Alliance"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TeamAlliance"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Flee"
+        args {
+          call_value {
+            functionName: "All Actors With Tag"
+            args {
+              call_value {
+                functionName: "Get Map Item (SenseTagList)"
+                args {
+                  string_value: "LokiCutter"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Nothing Selected"
+              }
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 5
+    idRef {
+      id: "61757fd63730629c79005647:6175b805373062900c005c28"
+    }
+  }
+  branches {
+    responseText: "Thanks for the help. See ya around."
+    actions {
+      ops {
+        functionName: "End Current Team Round"
+      }
+      ops {
+        functionName: "Set Team Alliance"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TeamAlliance"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Team Alliance"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TeamAlliance"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 6
+    idRef {
+      id: "61757fd63730629c79005647:6175bc38373062900c005c7c"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "6175b5303730629c7900570e"
+  }
+}
+nodes {
+  idRef {
+    id: "6175b831373062900c005c2b"
+  }
+  index: 5
+  text: "Yeah you better step away, and tell Xandro, he better watch his back.\n\nThe Cutters ain\'t stepping in to save his ass this time."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "6175bc66373062900c005c7f"
+  }
+  index: 6
+  text: "You and your buddy Xandro better watch your back.\n\nThe Cutters ain\'t gunna forget this!"
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+  idRef {
+    id: "61757fd63730629c79005647:61757fd73730629c7900564b"
+  }
+}

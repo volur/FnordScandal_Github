@@ -1,0 +1,55 @@
+idRef {
+  id: "6091ab3b3730622c37002d45"
+}
+ui_name: "FS_a1_Runner_Terminal"
+nodes {
+  idRef {
+    id: "6091ab5d3730622c37002d4d"
+  }
+  index: 0
+  text: "Welcome [New User]"
+  branches {
+    responseText: "Shadowland BBS"
+    nextNodeIndex: 1
+    idRef {
+      id: "6091ab3b3730622c37002d45:6091ab753730622c37002d4f"
+    }
+  }
+  branches {
+    responseText: "RESONATOR"
+    nextNodeIndex: 2
+    idRef {
+      id: "6091ab3b3730622c37002d45:609adc3c3730622c37002dbe"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "609adc323730622c37002dbc"
+  }
+  index: 1
+  text: ""
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "609add053730622c37002dc1"
+  }
+  index: 2
+  text: ""
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+  idRef {
+    id: "6091ab3b3730622c37002d45:6091ab3b3730622c37002d49"
+  }
+}
+roots {
+  responseText: "Exit"
+  nextNodeIndex: -1
+  idRef {
+    id: "6091ab3b3730622c37002d45:609ad4013730622c37002da1"
+  }
+}

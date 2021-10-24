@@ -51,6 +51,291 @@ triggers {
   }
   is_oneshot: false
 }
+triggers {
+  name: "LocalMetroTranspo-CityHall"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "601496bc373062d875001b0b"
+          }
+          args {
+            string_value: "Shadowrun_Subway_Travel"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 1110111
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Teleport Actor"
+      args {
+        call_value {
+          functionName: "All Actors on Team"
+          args {
+            call_value {
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specified Point (2D)"
+          args {
+            float_value: -115
+          }
+          args {
+            float_value: -99
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 5
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "601496bc373062d875001b0b"
+          }
+          args {
+            string_value: "Shadowrun_Subway_Travel"
+          }
+        }
+      }
+      args {
+        int_value: 9009009
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "60734f9e373062086f0066dc"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "Xandro-Job1"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "60219a8b3730625c4e0009e4"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "601496bc373062d875001b0b"
+          }
+          args {
+            string_value: "Xandro_Jobs"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Assign Conversation to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "609191023730622c190056ca"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "607230c93730621c640040e8"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Teleport Actor to Area Around Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "607230c93730621c640040e8"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+      args {
+        int_value: 4
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "6064df8d3730628038003b6f"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 5
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "60904a813730622c19005605"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
 regions {
   name: "TorontoDowntown"
   position {
@@ -114,8 +399,8 @@ regions {
   position {
     x: -60
     y: -87
-    width: 15
-    height: 7
+    width: 16
+    height: 8
   }
   enabledAtStart: true
   is_camera_region: true
@@ -679,6 +964,64 @@ regions {
   combat_outro_stinger: ""
   vfx_fill_prefab_name: ""
 }
+regions {
+  name: "HiddenLocker"
+  position {
+    x: -58
+    y: -121
+    width: 12
+    height: 16
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  is_matrix_node: false
+  is_vfx_fill_region: false
+  idRef {
+    id: "6090497d3730622c190055d5"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: true
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+  no_fow_in_region: false
+  combat_intense_music: ""
+  combat_wrapup_music: ""
+  loop_combat_intense_music: true
+  loop_combat_wrapup_music: true
+  combat_intense_threshold: 5
+  combat_wrapup_threshold: 2
+  combat_fade_interval: 2
+  combat_intro_stinger: ""
+  combat_outro_stinger: ""
+  vfx_fill_prefab_name: ""
+}
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
@@ -704,9 +1047,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -55
+    x: -52
     y: 0
-    z: -81
+    z: -83
   }
   orientation: ORIENTATION_S
   displayName: "CityHall_Security"
@@ -760,9 +1103,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -21
+    x: -48
     y: 0
-    z: -106.2
+    z: -119.2
   }
   orientation: ORIENTATION_S
   displayName: "RobFnord"
@@ -772,13 +1115,9 @@ characters {
   interactionRoot {
     isEnabled: true
     interactionRadius: 1
-    conversationPoint {
-      conversationID: "605e38cc3730629861002669"
-      turnToFace: true
-      default_speaker_id: "605a45b33730628c390056bd"
+    dummyInteraciton {
     }
-    interactionIcon: InteractionIcon_Conversation
-    interaction_info_text: "Giugahhha"
+    interaction_info_text: ""
   }
   lod: 0
   character_instance {
@@ -861,24 +1200,20 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -18
+    x: -53
     y: 0
-    z: -106
+    z: -107
   }
-  orientation: ORIENTATION_N
-  displayName: "Xandro Lee"
+  orientation: ORIENTATION_S
+  displayName: "XandroLee"
   idRef {
     id: "607230c93730621c640040e8"
   }
   interactionRoot {
     isEnabled: true
     interactionRadius: 1
-    conversationPoint {
-      conversationID: "605e573137306298610026d4"
-      turnToFace: true
-      default_speaker_id: "605e33da373062986100265a"
+    dummyInteraciton {
     }
-    interactionIcon: InteractionIcon_Conversation
     interaction_info_text: ""
   }
   lod: 0
@@ -957,6 +1292,16 @@ characters {
     first_name: "Xandro"
     last_name: "Lee"
   }
+}
+goals {
+  name: "Talk to Lao Da"
+  type: GoalType_Primary
+  status: GoalStatus_Hidden
+}
+goals {
+  name: "Visit the new apartment and talk to Slurpy"
+  type: GoalType_Primary
+  status: GoalStatus_Hidden
 }
 worldMapLocation {
   filename: ""

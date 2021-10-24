@@ -1,7 +1,7 @@
 idRef {
   id: "605e573137306298610026d4"
 }
-ui_name: "FS_Xandro_FirstEncounter"
+ui_name: "FS_a1_Xandro_FirstEncounter"
 nodes {
   idRef {
     id: "605e57a837306298610026dc"
@@ -125,7 +125,7 @@ nodes {
           call_value {
             functionName: "Get Map Item (Item)"
             args {
-              string_value: "FS_Xandro_Datastick"
+              string_value: "FS-Xandro_Datastick"
             }
           }
         }
@@ -286,6 +286,7 @@ nodes {
       }
     }
     nextNodeIndex: -1
+    onlyOnce: true
     idRef {
       id: "605e573137306298610026d4:6060cd1037306214100060f3"
     }

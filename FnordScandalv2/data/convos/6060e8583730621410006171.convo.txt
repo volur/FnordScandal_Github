@@ -1,7 +1,7 @@
 idRef {
   id: "6060e8583730621410006171"
 }
-ui_name: "FS_StufferShack_ManagerWorkstation"
+ui_name: "FS_a1_StufferShack_ManagerWorkstation"
 nodes {
   idRef {
     id: "6060e8783730621410006179"
@@ -40,7 +40,7 @@ nodes {
           call_value {
             functionName: "Get Map Item (Item)"
             args {
-              string_value: "FS_Xandro_Datastick"
+              string_value: "FS-Xandro_Datastick"
             }
           }
         }

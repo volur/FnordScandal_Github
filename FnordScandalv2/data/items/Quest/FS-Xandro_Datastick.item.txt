@@ -1,0 +1,11 @@
+id: "FS-Xandro_Datastick"
+type: ItemType_QuestItem
+uirep {
+  name: "Xandro\'s Datastick"
+}
+credentials: 0
+sorting_group: "Quest"
+closeupImage {
+  filename: "deckcon/deckcon_tech_deckblue01_e@2x"
+}
+closeupCaption: "Xandro\'s Datastick"

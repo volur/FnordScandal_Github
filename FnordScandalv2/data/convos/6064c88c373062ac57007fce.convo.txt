@@ -1,7 +1,7 @@
 idRef {
   id: "6064c88c373062ac57007fce"
 }
-ui_name: "FS_LoPans_Bartender"
+ui_name: "FS_a1_LoPans_Bartender"
 nodes {
   idRef {
     id: "6064c8c6373062ac57007fd6"

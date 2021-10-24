@@ -1,0 +1,289 @@
+idRef {
+  id: "60870e62373062cc0f002fd1"
+}
+ui_name: "FS_a1_LokiLounge_Cutters"
+nodes {
+  idRef {
+    id: "60870ec1373062cc0f002fd9"
+  }
+  index: 0
+  text: "You bring me something from Xandro?"
+  branches {
+    responseText: "Yeah a knuckle sandwich"
+    nextNodeIndex: 1
+    idRef {
+      id: "60870e62373062cc0f002fd1:60870f60373062cc0f002fdb"
+    }
+  }
+  branches {
+    responseText: "Hello, are you Loa Da?"
+    nextNodeIndex: 3
+    idRef {
+      id: "60870e62373062cc0f002fd1:6175a7b83730629c79005684"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "6087100b373062cc0f002fde"
+  }
+  index: 1
+  text: "You made a big mistake coming here"
+  branches {
+    responseText: "You better tell me what we want to know, or else."
+    nextNodeIndex: 2
+    idRef {
+      id: "60870e62373062cc0f002fd1:6087109c373062cc0f002fe0"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "608710c9373062cc0f002fe3"
+  }
+  index: 2
+  text: "Sure, as soon as you cough up the 10k Xandro owes me. But don\'t worry, I\'m gunna send you back to Xandro in a body bag!"
+  branches {
+    responseText: "I don\'t think so!"
+    actions {
+      ops {
+        functionName: "Set Team Alliance"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TeamAlliance"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Assign Conversation to Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Conversation)"
+            args {
+              string_value: "60870e62373062cc0f002fd1"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "6085b25c373062cc0f002fcc"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Enable/Disable Team\'s Turn"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Team Alliance"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TeamAlliance"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    idRef {
+      id: "60870e62373062cc0f002fd1:6087113e373062cc0f002fe5"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "6175a7d43730629c79005687"
+  }
+  index: 3
+  text: "Maybe. Hey Slurpy is this your new pet or somethin?"
+  branches {
+    responseText: "No. Xandro asked us to come here and talk with you. So what\'s going on?"
+    nextNodeIndex: 4
+    idRef {
+      id: "60870e62373062cc0f002fd1:6175a7e53730629c79005689"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "6175a86d3730629c7900568c"
+  }
+  index: 4
+  text: "You tell me."
+  branches {
+    responseText: "Slurpy, are you sure this is the right guy? He doesn\'t seem very helpful."
+    nextNodeIndex: 5
+    idRef {
+      id: "60870e62373062cc0f002fd1:6175a87b3730629c7900568e"
+    }
+  }
+  branches {
+    responseText: "You better tell me what we want to know, or else."
+    nextNodeIndex: 2
+    idRef {
+      id: "60870e62373062cc0f002fd1:6175af703730629c790056a4"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "6175aca83730629c790056a0"
+  }
+  index: 5
+  text: "Heh. Seriously? Where did you dig up this b\303\240n di\303\240o zi?"
+  branches {
+    responseText: "Look, we don\'t want any trouble. Just tell us what Xandro wants to know and we\'ll be on our way."
+    nextNodeIndex: 2
+    idRef {
+      id: "60870e62373062cc0f002fd1:6175acdd3730629c790056a2"
+    }
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Look, there\'s no need for name calling. Can you just tell us what Xandro wants from you?"
+    nextNodeIndex: 2
+    idRef {
+      id: "60870e62373062cc0f002fd1:6175b0333730629c790056ab"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+  idRef {
+    id: "60870e62373062cc0f002fd1:60870e62373062cc0f002fd5"
+  }
+}
+default_speaker_id: "6085b25c373062cc0f002fcc"

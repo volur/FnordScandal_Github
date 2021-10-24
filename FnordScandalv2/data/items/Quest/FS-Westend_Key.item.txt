@@ -1,0 +1,6 @@
+id: "FS-Westend_Key"
+type: ItemType_QuestItem
+uirep {
+}
+credentials: 0
+sorting_group: "Quest"

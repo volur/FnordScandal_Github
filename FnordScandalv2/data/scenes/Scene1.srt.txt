@@ -358,7 +358,7 @@ triggers {
         call_value {
           functionName: "Get Map Item (Item)"
           args {
-            string_value: "FS_StufferShack_ID"
+            string_value: "FS-StufferShack_ID"
           }
         }
       }
@@ -996,6 +996,39 @@ triggers {
         string_value: "MatrixNodesWiped"
       }
     }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Return home and forget this ever happened"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
   }
   isActive: true
   idRef {
@@ -1605,6 +1638,12 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Remove Screen Label"
+      args {
+        string_value: "MatrixNodesWiped"
+      }
+    }
   }
   isActive: true
   idRef {
@@ -1635,10 +1674,168 @@ triggers {
     ops {
       functionName: "Fade Camera Out"
       args {
+        float_value: 10
+      }
+      args {
+        float_value: 15
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "606e012d3730621c64004043"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Return home and forget this ever happened"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Fade Camera In"
+      args {
+        float_value: 5
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "Good work today kid - Meet me in the City Hall lobby in 20 mins."
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 8
+      }
+      args {
         float_value: 3
       }
       args {
-        float_value: 1
+        float_value: 2
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Meet Xandro at City Hall"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "601496bc373062d875001b0b"
+          }
+          args {
+            string_value: "Xandro_Jobs"
+          }
+        }
+      }
+      args {
+        int_value: 1
       }
     }
   }
@@ -1718,6 +1915,141 @@ triggers {
   isActive: true
   idRef {
     id: "606f50353730621c64004086"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "LocalMetroTranspo-Cabbagetown"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "601496bc373062d875001b0b"
+          }
+          args {
+            string_value: "Shadowrun_Subway_Travel"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 2220222
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Teleport Actor"
+      args {
+        call_value {
+          functionName: "All Actors on Team"
+          args {
+            call_value {
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specified Point (2D)"
+          args {
+            float_value: -275
+          }
+          args {
+            float_value: 45
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 5
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "601496bc373062d875001b0b"
+          }
+          args {
+            string_value: "Shadowrun_Subway_Travel"
+          }
+        }
+      }
+      args {
+        int_value: 9009009
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "60734f9e373062086f0066dc"
   }
   elseActions {
   }
@@ -4441,11 +4773,21 @@ goals {
 }
 goals {
   name: "Connect the datastick to the Manager\'s workstation"
-  type: GoalType_Secondary
+  type: GoalType_Primary
   status: GoalStatus_Hidden
 }
 goals {
   name: "Wipe out the Stuffer Shack system"
+  type: GoalType_Primary
+  status: GoalStatus_Hidden
+}
+goals {
+  name: "Meet Xandro at City Hall"
+  type: GoalType_Primary
+  status: GoalStatus_Hidden
+}
+goals {
+  name: "Return home and forget this ever happened"
   type: GoalType_Primary
   status: GoalStatus_Hidden
 }

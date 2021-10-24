@@ -1,7 +1,7 @@
 idRef {
   id: "605e38cc3730629861002669"
 }
-ui_name: "FS_StufferShack_FnordMumbles"
+ui_name: "FS_a1_StufferShack_FnordMumbles"
 nodes {
   idRef {
     id: "605e38cf3730629861002671"

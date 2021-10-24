@@ -1,7 +1,7 @@
 idRef {
   id: "607229443730621c640040a9"
 }
-ui_name: "FS_SubwayKiosk_Cabbagetown"
+ui_name: "FS_global_LocalMetroTicket"
 nodes {
   idRef {
     id: "607229583730621c640040b1"
@@ -10,6 +10,36 @@ nodes {
   text: "Welcome to the TTC\n\nChoose your destination."
   branches {
     responseText: "Cabbagetown"
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "601496bc373062d875001b0b"
+            }
+            args {
+              string_value: "Shadowrun_Subway_Travel"
+            }
+          }
+        }
+        args {
+          int_value: 2220222
+        }
+      }
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "Scene1"
+            }
+          }
+        }
+      }
+    }
     nextNodeIndex: -1
     idRef {
       id: "607229443730621c640040a9:607229c33730621c640040b3"
@@ -18,6 +48,23 @@ nodes {
   branches {
     responseText: "City Hall"
     actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "601496bc373062d875001b0b"
+            }
+            args {
+              string_value: "Shadowrun_Subway_Travel"
+            }
+          }
+        }
+        args {
+          int_value: 1110111
+        }
+      }
       ops {
         functionName: "Open Scene"
         args {
@@ -29,59 +76,6 @@ nodes {
           }
         }
       }
-      ops {
-        functionName: "Teleport Actor With Fade"
-        args {
-          call_value {
-            functionName: "Specific Actor"
-            args {
-              call_value {
-                functionName: "Triggering Actor"
-              }
-            }
-            args {
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Center of Region"
-            args {
-              call_value {
-                functionName: "Nothing Selected"
-              }
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "FacingDirection"
-            }
-            args {
-              int_value: 0
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "TeleportMethod"
-            }
-            args {
-              int_value: 0
-            }
-          }
-        }
-        args {
-          float_value: 0
-        }
-      }
-      ops {
-        functionName: "No Effect"
-      }
     }
     nextNodeIndex: -1
     idRef {
@@ -90,6 +84,36 @@ nodes {
   }
   branches {
     responseText: "Spadina"
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "601496bc373062d875001b0b"
+            }
+            args {
+              string_value: "Shadowrun_Subway_Travel"
+            }
+          }
+        }
+        args {
+          int_value: 3330333
+        }
+      }
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "TorontoHubChinatown"
+            }
+          }
+        }
+      }
+    }
     nextNodeIndex: -1
     idRef {
       id: "607229443730621c640040a9:607229ca3730621c640040b7"
@@ -97,9 +121,46 @@ nodes {
   }
   branches {
     responseText: "St.Carlin"
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "601496bc373062d875001b0b"
+            }
+            args {
+              string_value: "Shadowrun_Subway_Travel"
+            }
+          }
+        }
+        args {
+          int_value: 4440444
+        }
+      }
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "TorontoHubWestend"
+            }
+          }
+        }
+      }
+    }
     nextNodeIndex: -1
     idRef {
       id: "607229443730621c640040a9:607229cc3730621c640040b9"
+    }
+  }
+  branches {
+    responseText: "{{CC}}Esc{{/CC}}"
+    nextNodeIndex: -1
+    idRef {
+      id: "607229443730621c640040a9:6073740d373062d40e0046c8"
     }
   }
   nodeType: ConversationNodeType_Simple

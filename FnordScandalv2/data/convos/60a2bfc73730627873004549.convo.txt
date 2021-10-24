@@ -1,0 +1,149 @@
+idRef {
+  id: "60a2bfc73730627873004549"
+}
+ui_name: "FS_a1_Slurpy_Job1"
+nodes {
+  idRef {
+    id: "60a2c0193730627873004562"
+  }
+  index: 0
+  text: "Heya, you must be the new runner Xandro was talking about."
+  branches {
+    responseText: "I guess so?"
+    nextNodeIndex: 1
+    idRef {
+      id: "60a2bfc73730627873004549:60a2c0b53730627873004569"
+    }
+  }
+  branches {
+    responseText: "Hi, are you Slurpy?"
+    nextNodeIndex: 1
+    idRef {
+      id: "60a2bfc73730627873004549:617479003730629c7900554e"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "60a2c0b8373062787300456c"
+  }
+  index: 1
+  text: "Come in, relax, make yourself at home!"
+  branches {
+    responseText: "Thanks. Xandro said something about a job?"
+    nextNodeIndex: 2
+    idRef {
+      id: "60a2bfc73730627873004549:60a2c0e1373062787300456e"
+    }
+  }
+  branches {
+    responseText: "Nice place. Do you know anything about this job Xandro wants us to do?"
+    nextNodeIndex: 2
+    idRef {
+      id: "60a2bfc73730627873004549:617479483730629c7900555f"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "60a2c13c3730627873004571"
+  }
+  index: 2
+  text: "What kind of job?"
+  branches {
+    responseText: "He said we needed to go talk to someone named Lao Da at the Loki Lounge?"
+    nextNodeIndex: 3
+    idRef {
+      id: "60a2bfc73730627873004549:60a2c1c63730627873004573"
+    }
+  }
+  branches {
+    responseText: "Something about going to Loki Lounge and some guy Lao Da?"
+    nextNodeIndex: 3
+    idRef {
+      id: "60a2bfc73730627873004549:61747a113730629c7900557d"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "60a2c23a3730627873004576"
+  }
+  index: 3
+  text: "Ah drek... "
+  branches {
+    responseText: "Do you know what this is about?"
+    actions {
+      ops {
+        functionName: "Change Actor Team"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "6064e83c3730628038003ba5"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 4
+    idRef {
+      id: "60a2bfc73730627873004549:60a2c32e3730627873004578"
+    }
+  }
+  branches {
+    responseText: "Is there something wrong?"
+    nextNodeIndex: 4
+    idRef {
+      id: "60a2bfc73730627873004549:61747ad53730629c79005599"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "60a2c339373062787300457b"
+  }
+  index: 4
+  text: "Not yet, but if we\'re going to see Lao Da something\'s up."
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+  idRef {
+    id: "60a2bfc73730627873004549:60a2bfc7373062787300454d"
+  }
+}

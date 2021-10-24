@@ -46264,7 +46264,7 @@ props {
           call_value {
             functionName: "Get Map Item (Item)"
             args {
-              string_value: "FS_HeavenlyMassage_Membership"
+              string_value: "FS-HeavenlyMassage_Membership"
             }
           }
         }
@@ -48074,6 +48074,16 @@ props {
   orientation: ORIENTATION_E
   idRef {
     id: "604ce19f3730622433003df9"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    conversationPoint {
+      conversationID: "607229443730621c640040a9"
+      turnToFace: false
+    }
+    interactionIcon: InteractionIcon_SceneTransition
+    interaction_info_text: ""
   }
   lod: 0
 }
@@ -50828,7 +50838,7 @@ props {
     isEnabled: true
     interactionRadius: 1
     pickupItem {
-      itemName: "FS_StufferShack_ID"
+      itemName: "FS-StufferShack_ID"
       destroyOnPickup: true
     }
     interaction_info_text: "Stuffer Shack Employee ID"

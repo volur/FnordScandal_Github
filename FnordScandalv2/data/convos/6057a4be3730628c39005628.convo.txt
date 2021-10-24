@@ -1,7 +1,7 @@
 idRef {
   id: "6057a4be3730628c39005628"
 }
-ui_name: "FS_StufferShack_EmployeeTerminal"
+ui_name: "FS_a1_StufferShack_EmployeeTerminal"
 nodes {
   idRef {
     id: "6057a4d43730628c39005630"

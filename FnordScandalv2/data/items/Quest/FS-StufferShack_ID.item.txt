@@ -1,0 +1,11 @@
+id: "FS-StufferShack_ID"
+type: ItemType_QuestItem
+uirep {
+  name: "Stuffer Shack ID"
+  description: "Stuffer Shack Employee ID"
+}
+credentials: 0
+sorting_group: "Quest"
+closeupImage {
+  filename: "office/office_tech_keycardlanyard_s@2x"
+}

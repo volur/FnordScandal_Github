@@ -1,0 +1,6 @@
+id: "Fnord Trid Clip"
+type: ItemType_QuestItem
+uirep {
+}
+credentials: 0
+sorting_group: "Quest"

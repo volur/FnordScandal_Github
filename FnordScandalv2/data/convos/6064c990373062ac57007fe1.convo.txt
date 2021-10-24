@@ -1,7 +1,7 @@
 idRef {
   id: "6064c990373062ac57007fe1"
 }
-ui_name: "FS_Merchant_Magic"
+ui_name: "FS_a1_Merchant_Magic"
 nodes {
   idRef {
     id: "6064c9a1373062ac57007fe9"

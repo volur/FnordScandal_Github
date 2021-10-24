@@ -1,7 +1,7 @@
 idRef {
   id: "606225bb373062b05e00802b"
 }
-ui_name: "FS_Merchant_Medic"
+ui_name: "FS_a1_Merchant_Medic"
 nodes {
   idRef {
     id: "60622648373062b05e008033"

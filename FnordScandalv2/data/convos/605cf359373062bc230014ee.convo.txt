@@ -1,7 +1,7 @@
 idRef {
   id: "605cf359373062bc230014ee"
 }
-ui_name: "FS_StufferShack_Veejay"
+ui_name: "FS_a1_StufferShack_Veejay"
 nodes {
   idRef {
     id: "605cf3c0373062bc230014f6"
@@ -15,6 +15,22 @@ nodes {
       id: "605cf359373062bc230014ee:605cf54e373062bc23001508"
     }
   }
+  branches {
+    responseText: "Eyh buddy! Did you catch the match last night?"
+    nextNodeIndex: 1
+    idRef {
+      id: "605cf359373062bc230014ee:6126badd373062c8790052fb"
+    }
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Hey Veejay thanks for covering for me!"
+    nextNodeIndex: 1
+    idRef {
+      id: "605cf359373062bc230014ee:6126bb20373062c879005308"
+    }
+    auxiliaryLink: true
+  }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
     id: "605b9eea373062bc230014eb"
@@ -25,7 +41,7 @@ nodes {
     id: "605cf5f0373062bc23001516"
   }
   index: 1
-  text: "Yeah, yeah - Anyway, it\'s been pretty quiet - you should have an easy night. \n\nDid you remember your Stuffer Shack ID?"
+  text: "Seriously it\'s been busy! I still haven\'t watered the micro-greens and my shift-contract has been extended twice today. But it\'s slowed down a bit - you might get an easy night...\n\nAnyway, did you remember your Stuffer Shack ID today?"
   branches {
     responseText: "Ah dang! I\'ll be back in a few minutes."
     nextNodeIndex: -1
@@ -34,7 +50,7 @@ nodes {
     }
   }
   branches {
-    responseText: "Yep, we\'re all good"
+    responseText: "Yea, I have it with me {{CC}}Stuffer Shack ID{{/CC}}"
     conditions {
       ops {
         functionName: "Evaluate If Actor Has Item"
@@ -65,7 +81,7 @@ nodes {
           call_value {
             functionName: "Get Map Item (Item)"
             args {
-              string_value: "FS_StufferShack_ID"
+              string_value: "FS-StufferShack_ID"
             }
           }
         }
@@ -86,9 +102,9 @@ nodes {
     id: "606e04683730621c64004054"
   }
   index: 2
-  text: "Alright then, I\'m outta here. \n\nTake it sleazy!"
+  text: "Alright, i\'m logging off for the rest of the evening.\n\nTake it sleazy mate!"
   branches {
-    responseText: "Seeya"
+    responseText: "Seeya Veejay, thanks buddy"
     actions {
       ops {
         functionName: "Enable/Disable Interactable Object"
@@ -153,6 +169,142 @@ nodes {
     nextNodeIndex: -1
     idRef {
       id: "605cf359373062bc230014ee:606e048c3730621c64004056"
+    }
+  }
+  branches {
+    responseText: "Thanks Veejay!"
+    actions {
+      ops {
+        functionName: "Enable/Disable Interactable Object"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "6057a5b43730628c39005637"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Move To (Region)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "605b9eea373062bc230014eb"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Region)"
+            args {
+              string_value: "601862f5373062586c006478"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    idRef {
+      id: "605cf359373062bc230014ee:6126bb77373062c879005315"
+    }
+  }
+  branches {
+    responseText: "Woteveh mate!"
+    actions {
+      ops {
+        functionName: "Enable/Disable Interactable Object"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "6057a5b43730628c39005637"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Move To (Region)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "605b9eea373062bc230014eb"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Region)"
+            args {
+              string_value: "601862f5373062586c006478"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    idRef {
+      id: "605cf359373062bc230014ee:6126bf69373062c879005337"
     }
   }
   nodeType: ConversationNodeType_Simple

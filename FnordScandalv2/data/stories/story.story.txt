@@ -1,4 +1,32 @@
 id: ""
+variables {
+  name: "Shadowrun_Subway_Travel"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "Shadowrun_Subway_Travel"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "Xandro_Jobs"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "Xandro_Jobs"
+      typeName: "int"
+    }
+  }
+}
+startScene: "Scene1"
+allowCharacterImport: false
+resalePercent: 75
+upgradeToThreeApLevel: 117
 character_roster {
   roster_entries {
     reference_id: "berlinrunner_lv1_luckystrike"
@@ -547,3 +575,4 @@ character_roster {
     content_pack_source: "55e766536636619c20000bdc"
   }
 }
+allowFinalSaveImport: false

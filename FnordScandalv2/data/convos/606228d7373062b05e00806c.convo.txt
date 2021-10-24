@@ -1,7 +1,7 @@
 idRef {
   id: "606228d7373062b05e00806c"
 }
-ui_name: "FS_Lemei_Gatekeep"
+ui_name: "FS_a1_Lemei_Gatekeep"
 nodes {
   idRef {
     id: "60622904373062b05e008074"
@@ -40,7 +40,7 @@ nodes {
           call_value {
             functionName: "Get Map Item (Item)"
             args {
-              string_value: "FS_HeavenlyMassage_Membership"
+              string_value: "FS-HeavenlyMassage_Membership"
             }
           }
         }
@@ -89,7 +89,7 @@ nodes {
           call_value {
             functionName: "Get Map Item (Item)"
             args {
-              string_value: "FS_HeavenlyMassage_Membership"
+              string_value: "FS-HeavenlyMassage_Membership"
             }
           }
         }
